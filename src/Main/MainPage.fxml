@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.shape.*?>
 <?import javafx.scene.chart.*?>
@@ -21,7 +24,7 @@
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #263238;" SplitPane.resizableWithParent="false" />
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                            <children>
-                              <SplitPane dividerPositions="0.30526315789473685" layoutX="25.0" layoutY="203.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" style="-fx-background-color: White;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                              <SplitPane dividerPositions="0.3053" layoutX="25.0" layoutY="203.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" style="-fx-background-color: White;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                 <items>
                                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="225.0" prefWidth="784.0">
                                        <children>
@@ -94,6 +97,83 @@
                     </items>
                   </SplitPane>
                </content></Tab>
+            <Tab text="Member">
+               <content>
+                  <SplitPane dividerPositions="0.3053" prefHeight="200.0" prefWidth="200.0">
+                     <items>
+                        <AnchorPane prefHeight="664.0" prefWidth="402.0" style="-fx-background-color: #263238;" />
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="77.0" layoutY="161.0" text="Nick Name">
+                                 <font>
+                                    <Font name="Times New Roman Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="382.0" layoutY="208.0" text="Mobile Number">
+                                 <font>
+                                    <Font name="Times New Roman Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="382.0" layoutY="158.0" text="Internal Phone">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="77.0" layoutY="208.0" text="Full Name">
+                                 <font>
+                                    <Font name="Times New Roman Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <TextField layoutX="181.0" layoutY="159.0" prefHeight="25.0" prefWidth="164.0" />
+                              <TextField layoutX="181.0" layoutY="205.0" prefHeight="25.0" prefWidth="167.0" />
+                              <TextField layoutX="535.0" layoutY="159.0" />
+                              <TextField layoutX="535.0" layoutY="205.0" />
+                              <Button layoutX="144.0" layoutY="282.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="105.0" text="ADD">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="341.0" layoutY="282.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="103.0" text="UPDATE">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="524.0" layoutY="282.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="105.0" text="DELETE">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                              <ScrollPane layoutX="32.0" layoutY="350.0" prefViewportHeight="266.0" prefViewportWidth="659.0">
+                                 <content>
+                                    <ScrollPane prefViewportHeight="266.0" prefViewportWidth="659.0">
+                                       <content>
+                                          <TableView layoutX="32.0" layoutY="350.0" prefHeight="266.0" prefWidth="659.0">
+                                            <columns>
+                                              <TableColumn prefWidth="162.0" text="Nick Name" />
+                                              <TableColumn prefWidth="182.0" text="Full Name" />
+                                                <TableColumn prefWidth="138.0" text="Internal Phone" />
+                                                <TableColumn prefWidth="162.0" text="Mobile Number" />
+                                            </columns>
+                                          </TableView>
+                                       </content>
+                                    </ScrollPane>
+                                 </content>
+                              </ScrollPane>
+                              <ImageView blendMode="DARKEN" fitHeight="139.0" fitWidth="138.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <effect>
+                                    <ImageInput>
+                                       <source>
+                                          <Image url="file:/D:/Curtin%20Project/HCI/HCI/src/Main/resources/img/user1.jpg" />
+                                       </source>
+                                    </ImageInput>
+                                 </effect>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                     </items>
+                  </SplitPane>
+               </content>
+            </Tab>
         </tabs>
       </TabPane>
    </children>
