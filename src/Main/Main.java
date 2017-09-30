@@ -29,7 +29,7 @@ public class Main extends Application implements EventHandler<ActionEvent> {
       
         try {
             Parent root = FXMLLoader.load(getClass().getResource("MainPage.fxml"));
-            primaryStage.initStyle(StageStyle.UNDECORATED);
+            primaryStage.initStyle(StageStyle.DECORATED);
             
             Scene scene = new Scene(root);
             
