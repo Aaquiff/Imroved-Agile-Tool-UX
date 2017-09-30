@@ -235,6 +235,9 @@
                                           <TextField alignment="CENTER_RIGHT" layoutX="624.0" layoutY="157.0" prefHeight="25.0" prefWidth="222.0" promptText="Sprint 1" />
                                           <Label layoutX="21.0" layoutY="197.0" text="Description" />
                                           <TextArea layoutX="21.0" layoutY="214.0" prefHeight="77.0" prefWidth="826.0" />
+                                          <Label layoutX="818.0" layoutY="6.0" text="Day/s" />
+                                          <Label layoutX="798.0" layoutY="6.0" text="20" />
+                                          <Label layoutX="667.0" layoutY="6.0" text="Total Time Estimated :" />
                                        </children>
                                     </AnchorPane>
                               </content>
@@ -253,18 +256,21 @@
                                           <TextField layoutX="69.0" layoutY="93.0" prefHeight="25.0" prefWidth="227.0" />
                                           <TextField layoutX="69.0" layoutY="126.0" prefHeight="25.0" prefWidth="227.0" />
                                           <TextField layoutX="69.0" layoutY="156.0" prefHeight="25.0" prefWidth="227.0" />
-                                          <Label layoutX="543.0" layoutY="33.0" text="ID" />
-                                          <Label layoutX="540.0" layoutY="98.0" text="Origin" />
-                                          <Label layoutX="541.0" layoutY="66.0" text="Title" />
-                                          <Label layoutX="539.0" layoutY="131.0" text="Type" />
-                                          <Label layoutX="541.0" layoutY="161.0" text="BV" />
-                                          <TextField layoutX="619.0" layoutY="29.0" prefHeight="25.0" prefWidth="227.0" />
-                                          <TextField layoutX="620.0" layoutY="62.0" prefHeight="25.0" prefWidth="226.0" />
-                                          <TextField layoutX="621.0" layoutY="94.0" prefHeight="25.0" prefWidth="225.0" />
-                                          <TextField layoutX="623.0" layoutY="127.0" prefHeight="25.0" prefWidth="223.0" />
-                                          <TextField layoutX="624.0" layoutY="157.0" prefHeight="25.0" prefWidth="222.0" />
+                                          <Label layoutX="543.0" layoutY="33.0" text="W" />
+                                          <Label layoutX="540.0" layoutY="98.0" text="Status" />
+                                          <Label layoutX="541.0" layoutY="66.0" text="Target" />
+                                          <Label layoutX="539.0" layoutY="131.0" text="Project" />
+                                          <Label layoutX="541.0" layoutY="161.0" text="Sprint" />
+                                          <TextField alignment="CENTER_RIGHT" layoutX="619.0" layoutY="29.0" prefHeight="25.0" prefWidth="227.0" promptText="W 1" />
+                                          <TextField alignment="CENTER_RIGHT" layoutX="620.0" layoutY="62.0" prefHeight="25.0" prefWidth="226.0" promptText="Target 1" />
+                                          <TextField alignment="CENTER_RIGHT" layoutX="621.0" layoutY="94.0" prefHeight="25.0" prefWidth="225.0" promptText="Status 1" />
+                                          <TextField alignment="CENTER_RIGHT" layoutX="623.0" layoutY="127.0" prefHeight="25.0" prefWidth="223.0" promptText="Project 1" />
+                                          <TextField alignment="CENTER_RIGHT" layoutX="624.0" layoutY="157.0" prefHeight="25.0" prefWidth="222.0" promptText="Sprint 1" />
                                           <Label layoutX="21.0" layoutY="197.0" text="Description" />
                                           <TextArea layoutX="21.0" layoutY="214.0" prefHeight="77.0" prefWidth="826.0" />
+                                          <Label layoutX="818.0" layoutY="6.0" text="Days" />
+                                          <Label layoutX="798.0" layoutY="6.0" text="20" />
+                                          <Label layoutX="674.0" layoutY="6.0" text="Total Time Estimated :" />
                                        </children>
                                     </AnchorPane>
                                  </content>
