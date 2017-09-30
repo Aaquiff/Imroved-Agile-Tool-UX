@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.effect.ImageInput?>
@@ -180,7 +184,154 @@
             </Tab>
             <Tab text="Projects">
               <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="26.0" layoutY="45.0" text="Project/s" />
+                        <ComboBox layoutX="87.0" layoutY="41.0" prefWidth="150.0" promptText="Project #1" />
+                        <Button layoutX="237.0" layoutY="41.0" mnemonicParsing="false" text="Add" />
+                        <Label layoutX="26.0" layoutY="82.0" text="From" />
+                        <Label layoutX="26.0" layoutY="117.0" text="To" />
+                        <TextField layoutX="88.0" layoutY="78.0" prefHeight="25.0" prefWidth="188.0" />
+                        <TextField layoutX="88.0" layoutY="113.0" prefHeight="25.0" prefWidth="188.0" />
+                        <Separator layoutX="334.0" layoutY="36.0" orientation="VERTICAL" prefHeight="109.0" prefWidth="7.0" />
+                        <Label layoutX="362.0" layoutY="37.0" text="Description" />
+                        <TextArea layoutX="433.0" layoutY="34.0" prefHeight="81.0" prefWidth="583.0" />
+                        <CheckBox layoutX="885.0" layoutY="126.0" mnemonicParsing="false" text="Maintenance Project" />
+                        <Separator layoutX="26.0" layoutY="157.0" prefHeight="10.0" prefWidth="987.0" />
+                        <Button layoutX="28.0" layoutY="167.0" mnemonicParsing="false" text="Add" />
+                        <Button layoutX="931.0" layoutY="167.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="85.0" text="ADD WORK" />
+                        <Button layoutX="75.0" layoutY="167.0" mnemonicParsing="false" text="Affect to Sprint" />
+                        <Button layoutX="284.0" layoutY="168.0" mnemonicParsing="false" text="Duplicate" />
+                        <Button layoutX="236.0" layoutY="168.0" mnemonicParsing="false" text="Split" />
+                        <Button layoutX="182.0" layoutY="168.0" mnemonicParsing="false" text="Move" />
+                        <Button layoutX="931.0" layoutY="203.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="85.0" text="Delete Work" />
+                        <Button layoutX="362.0" layoutY="168.0" mnemonicParsing="false" text="Sort" />
+                        <TabPane layoutX="27.0" layoutY="216.0" prefHeight="346.0" prefWidth="860.0" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                            <Tab text="Untitled Tab 1">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="206.0" prefWidth="423.0">
+                                       <children>
+                                          <Label layoutX="25.0" layoutY="33.0" text="ID" />
+                                          <Label layoutX="22.0" layoutY="97.0" text="Origin" />
+                                          <Label layoutX="23.0" layoutY="65.0" text="Title" />
+                                          <Label layoutX="21.0" layoutY="130.0" text="Type" />
+                                          <Label layoutX="23.0" layoutY="160.0" text="BV" />
+                                          <TextField layoutX="69.0" layoutY="28.0" prefHeight="25.0" prefWidth="227.0" />
+                                          <TextField layoutX="69.0" layoutY="61.0" prefHeight="25.0" prefWidth="228.0" />
+                                          <TextField layoutX="69.0" layoutY="93.0" prefHeight="25.0" prefWidth="227.0" />
+                                          <TextField layoutX="69.0" layoutY="126.0" prefHeight="25.0" prefWidth="227.0" />
+                                          <TextField layoutX="69.0" layoutY="156.0" prefHeight="25.0" prefWidth="227.0" />
+                                          <Label layoutX="543.0" layoutY="33.0" text="ID" />
+                                          <Label layoutX="540.0" layoutY="98.0" text="Origin" />
+                                          <Label layoutX="541.0" layoutY="66.0" text="Title" />
+                                          <Label layoutX="539.0" layoutY="131.0" text="Type" />
+                                          <Label layoutX="541.0" layoutY="161.0" text="BV" />
+                                          <TextField layoutX="619.0" layoutY="29.0" prefHeight="25.0" prefWidth="227.0" />
+                                          <TextField layoutX="620.0" layoutY="62.0" prefHeight="25.0" prefWidth="226.0" />
+                                          <TextField layoutX="621.0" layoutY="94.0" prefHeight="25.0" prefWidth="225.0" />
+                                          <TextField layoutX="623.0" layoutY="127.0" prefHeight="25.0" prefWidth="223.0" />
+                                          <TextField layoutX="624.0" layoutY="157.0" prefHeight="25.0" prefWidth="222.0" />
+                                          <Label layoutX="21.0" layoutY="197.0" text="Description" />
+                                          <TextArea layoutX="21.0" layoutY="214.0" prefHeight="77.0" prefWidth="826.0" />
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                              <Tab text="Untitled Tab 1">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="206.0" prefWidth="423.0">
+                                       <children>
+                                          <Label layoutX="25.0" layoutY="33.0" text="ID" />
+                                          <Label layoutX="22.0" layoutY="97.0" text="Origin" />
+                                          <Label layoutX="23.0" layoutY="65.0" text="Title" />
+                                          <Label layoutX="21.0" layoutY="130.0" text="Type" />
+                                          <Label layoutX="23.0" layoutY="160.0" text="BV" />
+                                          <TextField layoutX="69.0" layoutY="28.0" prefHeight="25.0" prefWidth="227.0" />
+                                          <TextField layoutX="69.0" layoutY="61.0" prefHeight="25.0" prefWidth="228.0" />
+                                          <TextField layoutX="69.0" layoutY="93.0" prefHeight="25.0" prefWidth="227.0" />
+                                          <TextField layoutX="69.0" layoutY="126.0" prefHeight="25.0" prefWidth="227.0" />
+                                          <TextField layoutX="69.0" layoutY="156.0" prefHeight="25.0" prefWidth="227.0" />
+                                          <Label layoutX="543.0" layoutY="33.0" text="ID" />
+                                          <Label layoutX="540.0" layoutY="98.0" text="Origin" />
+                                          <Label layoutX="541.0" layoutY="66.0" text="Title" />
+                                          <Label layoutX="539.0" layoutY="131.0" text="Type" />
+                                          <Label layoutX="541.0" layoutY="161.0" text="BV" />
+                                          <TextField layoutX="619.0" layoutY="29.0" prefHeight="25.0" prefWidth="227.0" />
+                                          <TextField layoutX="620.0" layoutY="62.0" prefHeight="25.0" prefWidth="226.0" />
+                                          <TextField layoutX="621.0" layoutY="94.0" prefHeight="25.0" prefWidth="225.0" />
+                                          <TextField layoutX="623.0" layoutY="127.0" prefHeight="25.0" prefWidth="223.0" />
+                                          <TextField layoutX="624.0" layoutY="157.0" prefHeight="25.0" prefWidth="222.0" />
+                                          <Label layoutX="21.0" layoutY="197.0" text="Description" />
+                                          <TextArea layoutX="21.0" layoutY="214.0" prefHeight="77.0" prefWidth="826.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab text="Untitled Tab 1">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="206.0" prefWidth="423.0">
+                                       <children>
+                                          <Label layoutX="25.0" layoutY="33.0" text="ID" />
+                                          <Label layoutX="22.0" layoutY="97.0" text="Origin" />
+                                          <Label layoutX="23.0" layoutY="65.0" text="Title" />
+                                          <Label layoutX="21.0" layoutY="130.0" text="Type" />
+                                          <Label layoutX="23.0" layoutY="160.0" text="BV" />
+                                          <TextField layoutX="69.0" layoutY="28.0" prefHeight="25.0" prefWidth="227.0" />
+                                          <TextField layoutX="69.0" layoutY="61.0" prefHeight="25.0" prefWidth="228.0" />
+                                          <TextField layoutX="69.0" layoutY="93.0" prefHeight="25.0" prefWidth="227.0" />
+                                          <TextField layoutX="69.0" layoutY="126.0" prefHeight="25.0" prefWidth="227.0" />
+                                          <TextField layoutX="69.0" layoutY="156.0" prefHeight="25.0" prefWidth="227.0" />
+                                          <Label layoutX="543.0" layoutY="33.0" text="ID" />
+                                          <Label layoutX="540.0" layoutY="98.0" text="Origin" />
+                                          <Label layoutX="541.0" layoutY="66.0" text="Title" />
+                                          <Label layoutX="539.0" layoutY="131.0" text="Type" />
+                                          <Label layoutX="541.0" layoutY="161.0" text="BV" />
+                                          <TextField layoutX="619.0" layoutY="29.0" prefHeight="25.0" prefWidth="227.0" />
+                                          <TextField layoutX="620.0" layoutY="62.0" prefHeight="25.0" prefWidth="226.0" />
+                                          <TextField layoutX="621.0" layoutY="94.0" prefHeight="25.0" prefWidth="225.0" />
+                                          <TextField layoutX="623.0" layoutY="127.0" prefHeight="25.0" prefWidth="223.0" />
+                                          <TextField layoutX="624.0" layoutY="157.0" prefHeight="25.0" prefWidth="222.0" />
+                                          <Label layoutX="21.0" layoutY="197.0" text="Description" />
+                                          <TextArea layoutX="21.0" layoutY="214.0" prefHeight="77.0" prefWidth="826.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab text="Untitled Tab 1">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="206.0" prefWidth="423.0">
+                                       <children>
+                                          <Label layoutX="25.0" layoutY="33.0" text="ID" />
+                                          <Label layoutX="22.0" layoutY="97.0" text="Origin" />
+                                          <Label layoutX="23.0" layoutY="65.0" text="Title" />
+                                          <Label layoutX="21.0" layoutY="130.0" text="Type" />
+                                          <Label layoutX="23.0" layoutY="160.0" text="BV" />
+                                          <TextField layoutX="69.0" layoutY="28.0" prefHeight="25.0" prefWidth="227.0" />
+                                          <TextField layoutX="69.0" layoutY="61.0" prefHeight="25.0" prefWidth="228.0" />
+                                          <TextField layoutX="69.0" layoutY="93.0" prefHeight="25.0" prefWidth="227.0" />
+                                          <TextField layoutX="69.0" layoutY="126.0" prefHeight="25.0" prefWidth="227.0" />
+                                          <TextField layoutX="69.0" layoutY="156.0" prefHeight="25.0" prefWidth="227.0" />
+                                          <Label layoutX="543.0" layoutY="33.0" text="ID" />
+                                          <Label layoutX="540.0" layoutY="98.0" text="Origin" />
+                                          <Label layoutX="541.0" layoutY="66.0" text="Title" />
+                                          <Label layoutX="539.0" layoutY="131.0" text="Type" />
+                                          <Label layoutX="541.0" layoutY="161.0" text="BV" />
+                                          <TextField layoutX="619.0" layoutY="29.0" prefHeight="25.0" prefWidth="227.0" />
+                                          <TextField layoutX="620.0" layoutY="62.0" prefHeight="25.0" prefWidth="226.0" />
+                                          <TextField layoutX="621.0" layoutY="94.0" prefHeight="25.0" prefWidth="225.0" />
+                                          <TextField layoutX="623.0" layoutY="127.0" prefHeight="25.0" prefWidth="223.0" />
+                                          <TextField layoutX="624.0" layoutY="157.0" prefHeight="25.0" prefWidth="222.0" />
+                                          <Label layoutX="21.0" layoutY="197.0" text="Description" />
+                                          <TextArea layoutX="21.0" layoutY="214.0" prefHeight="77.0" prefWidth="826.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                          </tabs>
+                        </TabPane>
+                     </children>
+                  </AnchorPane>
               </content>
             </Tab>
         </tabs>
