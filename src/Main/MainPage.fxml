@@ -234,7 +234,7 @@
                                           <TextField alignment="CENTER_RIGHT" layoutX="623.0" layoutY="127.0" prefHeight="25.0" prefWidth="223.0" promptText="Project 1" />
                                           <TextField alignment="CENTER_RIGHT" layoutX="624.0" layoutY="157.0" prefHeight="25.0" prefWidth="222.0" promptText="Sprint 1" />
                                           <Label layoutX="21.0" layoutY="197.0" text="Description" />
-                                          <TextArea layoutX="21.0" layoutY="214.0" prefHeight="77.0" prefWidth="826.0" />
+                                          <TextArea layoutX="21.0" layoutY="214.0" prefHeight="77.0" prefWidth="826.0" promptText="Description 1 ....." />
                                           <Label layoutX="818.0" layoutY="6.0" text="Day/s" />
                                           <Label layoutX="798.0" layoutY="6.0" text="20" />
                                           <Label layoutX="667.0" layoutY="6.0" text="Total Time Estimated :" />
@@ -267,7 +267,7 @@
                                           <TextField alignment="CENTER_RIGHT" layoutX="623.0" layoutY="127.0" prefHeight="25.0" prefWidth="223.0" promptText="Project 1" />
                                           <TextField alignment="CENTER_RIGHT" layoutX="624.0" layoutY="157.0" prefHeight="25.0" prefWidth="222.0" promptText="Sprint 1" />
                                           <Label layoutX="21.0" layoutY="197.0" text="Description" />
-                                          <TextArea layoutX="21.0" layoutY="214.0" prefHeight="77.0" prefWidth="826.0" />
+                                          <TextArea layoutX="21.0" layoutY="214.0" prefHeight="77.0" prefWidth="826.0" promptText="Description 2 ......." />
                                           <Label layoutX="818.0" layoutY="6.0" text="Days" />
                                           <Label layoutX="798.0" layoutY="6.0" text="20" />
                                           <Label layoutX="674.0" layoutY="6.0" text="Total Time Estimated :" />
