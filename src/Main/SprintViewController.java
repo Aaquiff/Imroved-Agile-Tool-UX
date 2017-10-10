@@ -28,6 +28,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.SplitPane;
 import javafx.scene.control.TableView;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javax.swing.JOptionPane;
 import models.Task;
@@ -63,6 +64,23 @@ public class SprintViewController {
     public TableView inProgressTable;
     @FXML
     public TableView doneTable;
+    
+    //Search, Start
+    @FXML
+    public Pane pnButtonPane;
+
+    @FXML
+    public Button btnAffected;
+
+    @FXML
+    public Button btnDuplicate;
+
+    @FXML
+    public Button btnSort;
+
+    @FXML
+    public Button btnExport;
+    //Search, End
 
     ArrayList<Sprint> sprints = new ArrayList<Sprint>();
     Task[] tasks = new Task[10];
