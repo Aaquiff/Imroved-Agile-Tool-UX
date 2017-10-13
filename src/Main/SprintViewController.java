@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Main;
 
 import java.util.ArrayList;
@@ -24,15 +19,10 @@ import javafx.scene.image.ImageView;
 import javax.swing.JOptionPane;
 import models.Task;
 
-/**
- *
- * @author aaralk
- */
 public class SprintViewController {
+    
     boolean isNavigatorVisible;
-    
     Sprint currentSprint;
-    
     Node componentsPane;
 
     @FXML
@@ -66,21 +56,15 @@ public class SprintViewController {
 
     ArrayList<Sprint> sprints = new ArrayList<Sprint>();
     
+    public static final ObservableList data = FXCollections.observableArrayList();
 
-    public static final ObservableList data
-            = FXCollections.observableArrayList();
+    public static final ObservableList newTasks = FXCollections.observableArrayList();
 
-    public static final ObservableList newTasks
-            = FXCollections.observableArrayList();
+    public static final ObservableList tasksInProgress = FXCollections.observableArrayList();
 
-    public static final ObservableList tasksInProgress
-            = FXCollections.observableArrayList();
-
-    public static final ObservableList tasksDone
-            = FXCollections.observableArrayList();
+    public static final ObservableList tasksDone = FXCollections.observableArrayList();
     
-    public void InitializeGraphics()
-    {
+    public void InitializeGraphics() {
         btnHamburger.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("resources/img/menu.png"),25,25,false,false)));
         btnNotes.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("resources/img/notes.png"),100,100,false,false)));
         btnDelete.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("resources/img/delete.png"),30,30,false,false)));
@@ -88,8 +72,7 @@ public class SprintViewController {
         btnEditSprint.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("resources/img/edit.png"),30,30,false,false)));
     }
     
-    public void RefreshCurrent()
-    {
+    public void RefreshCurrent() {
         ShowSprint(currentSprint.name);
     }
     

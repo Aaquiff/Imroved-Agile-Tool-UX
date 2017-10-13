@@ -35,9 +35,9 @@
                         <Pane prefHeight="53.0" prefWidth="1160.0" style="-fx-background-color: #263238;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                             <children>
                                 <Button fx:id="btnHamburger" layoutX="5.0" layoutY="5.0" mnemonicParsing="false" onAction="#ToggleNavigatorPane" onMouseEntered="#ToggleNavigatorPane" prefHeight="36.0" prefWidth="39.0" style="-fx-background-color: White;" textFill="WHITE" />
-                                <Button fx:id="btnNewSprint" layoutX="51.0" layoutY="5.0" mnemonicParsing="false" onAction="#NewSprint" prefHeight="36.0" prefWidth="126.0" style="-fx-background-color: #ecf0f1;" text="New Sprint" />
-                                <Button fx:id="btnDelete" layoutX="184.0" layoutY="5.0" mnemonicParsing="false" onAction="#DeleteSprint" prefHeight="36.0" prefWidth="126.0" style="-fx-background-color: #ecf0f1;" text="Delete Sprint" />
-                        <Button fx:id="btnEditSprint" layoutX="317.0" layoutY="5.0" mnemonicParsing="false" onAction="#EditTask" prefHeight="36.0" prefWidth="126.0" style="-fx-background-color: #ecf0f1;" text="Edit Sprint" />
+                                <Button fx:id="btnNewSprint" layoutX="51.0" layoutY="5.0" mnemonicParsing="false" onAction="#NewSprint" prefHeight="36.0" prefWidth="115.0" style="-fx-background-color: #ecf0f1;" text="New Sprint" />
+                                <Button fx:id="btnDelete" layoutX="171.0" layoutY="5.0" mnemonicParsing="false" onAction="#DeleteSprint" prefHeight="36.0" prefWidth="115.0" style="-fx-background-color: #ecf0f1;" text="Delete Sprint" />
+                        <Button fx:id="btnEditSprint" layoutX="291.0" layoutY="5.0" mnemonicParsing="false" onAction="#EditTask" prefHeight="36.0" prefWidth="115.0" style="-fx-background-color: #ecf0f1;" text="Edit Sprint" />
                             </children>
                         </Pane>
                     </children>
