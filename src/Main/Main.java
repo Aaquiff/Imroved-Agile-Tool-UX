@@ -28,8 +28,11 @@ public class Main extends Application implements EventHandler<ActionEvent> {
     public void start(Stage primaryStage) {
       
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("MainPage.fxml"));
+            String mainPage = "MainPage.fxml";
+            mainPage = "SprintPage.fxml";
+            Parent root = FXMLLoader.load(getClass().getResource(mainPage));
             primaryStage.initStyle(StageStyle.DECORATED);
+            primaryStage.setMaximized(true);
             
             Scene scene = new Scene(root);
             
@@ -47,6 +50,7 @@ public class Main extends Application implements EventHandler<ActionEvent> {
      */
     public static void main(String[] args) {
         launch(args);
+
     }
 
     @Override
