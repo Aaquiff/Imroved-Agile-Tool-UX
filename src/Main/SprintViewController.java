@@ -28,7 +28,6 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.SplitPane;
 import javafx.scene.control.TableView;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javax.swing.JOptionPane;
 import models.Task;
@@ -64,26 +63,9 @@ public class SprintViewController {
     public TableView inProgressTable;
     @FXML
     public TableView doneTable;
-    
-    //Search, Start
-    @FXML
-    public Pane pnButtonPane;
-
-    @FXML
-    public Button btnAffected;
-
-    @FXML
-    public Button btnDuplicate;
-
-    @FXML
-    public Button btnSort;
-
-    @FXML
-    public Button btnExport;
-    //Search, End
 
     ArrayList<Sprint> sprints = new ArrayList<Sprint>();
-    Task[] tasks = new Task[10];
+    
 
     public static final ObservableList data
             = FXCollections.observableArrayList();
@@ -97,6 +79,11 @@ public class SprintViewController {
     public static final ObservableList tasksDone
             = FXCollections.observableArrayList();
     
+    public void RefreshCurrent()
+    {
+        ShowSprint(currentSprint.name);
+    }
+    
     public void NewSprint(){
         dlgNewSprint dialog = new dlgNewSprint(null,true);
         dialog.setVisible(true);
@@ -105,6 +92,14 @@ public class SprintViewController {
             Sprint sprint = new Sprint(dialog.name, dialog.duration, "", null, "");
             sprints.add(sprint);
             data.add(sprint.name);
+            
+            Alert alert = new Alert(AlertType.INFORMATION);
+            alert.setTitle("Information");
+            alert.setHeaderText("Sprint Added");
+            alert.setContentText("Add tasks to sprint to make it more interesting");
+
+            alert.showAndWait();
+
         }
     }
     
@@ -168,11 +163,14 @@ public class SprintViewController {
         mainSplitPlane.getItems().remove(componentsPane);
         isNavigatorVisible = false;
         
-        tasks[0] = new Task("1", "Task 1", "First Task", "origin", "US", 5, 34, "Release1", "New", "Mfin", "1");
-        tasks[1] = new Task("2", "Task 2", "Second Task", "origin", "US", 5, 34, "Release2", "New", "Mfin", "1");
-        tasks[2] = new Task("3", "Task 3", "Third Task", "origin", "US", 5, 34, "Release2", "In Progress", "Mfin", "1");
-        tasks[3] = new Task("4", "Task 4", "Fourth Task", "origin", "US", 5, 34, "Release3", "Done", "Mfin", "1");
-        tasks[4] = new Task("5", "Task 5", "Five Task", "origin", "US", 5, 34, "Release4", "Done", "Mfin", "1");
+        ArrayList<Task> tasks = new ArrayList<Task>();
+        
+        
+        tasks.add(new Task("1", "Task 1", "First Task", "origin", "US", 5, 34, "Release1", "New", "Mfin", "1") );
+        tasks.add(new Task("2", "Task 2", "Second Task", "origin", "US", 5, 34, "Release2", "New", "Mfin", "1") );
+        tasks.add(new Task("3", "Task 3", "Third Task", "origin", "US", 5, 34, "Release2", "In Progress", "Mfin", "1") );
+        tasks.add(new Task("4", "Task 4", "Fourth Task", "origin", "US", 5, 34, "Release3", "Done", "Mfin", "1") );
+        tasks.add(new Task("5", "Task 5", "Five Task", "origin", "US", 5, 34, "Release4", "Done", "Mfin", "1") );
 
         sprints.add(new Sprint("Sprint 1", 10, "22nd August - 4th September", tasks, ""));
         sprints.add(new Sprint("Sprint 2", 12, "23 February - 4th March", tasks, ""));
@@ -222,29 +220,27 @@ public class SprintViewController {
         }
     }
 
-    public void Add() {
-       
-                
-//        Parent root;
-//        try {
-//            root = FXMLLoader.load(getClass().getResource("SprintPage.fxml"));
-//            Stage stage = new Stage();
-//            stage.setTitle("My New Stage Title");
-//            stage.setScene(new Scene(root, 450, 450));
-//            // Hide this current window (if this is what you want)
-//            //((Node)(event.getSource())).getScene().getWindow().hide();
-//
-//            System.out.println(root.getId());
-//        }
-//        catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//        Alert alert = new Alert(AlertType.INFORMATION);
-//        alert.setTitle("Information Dialog");
-//        alert.setHeaderText("Look, an Information Dialog");
-//        alert.setContentText("I have a great message for you!");
-//
-//        alert.showAndWait();
+    public void AddTask() {
+        dlgAddTask dialog = new dlgAddTask(null,true);
+        dialog.setVisible(true);
+        if(dialog.isAdded)
+        {
+            Task task = dialog.task;
+            task.setStatus("New");
+            currentSprint.tasks.add(task);
+            
+            RefreshCurrent();
+            
+            //sprints.add(sprint);
+            //data.add(sprint.name);
+            
+            Alert alert = new Alert(AlertType.INFORMATION);
+            alert.setTitle("Information");
+            alert.setHeaderText("Sprint Added");
+            alert.setContentText("Add tasks to sprint to make it more interesting");
 
+            alert.showAndWait();
+
+        }
     }
 }

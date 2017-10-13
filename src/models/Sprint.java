@@ -5,6 +5,8 @@
  */
 package models;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author aaralk
@@ -13,10 +15,10 @@ public class Sprint {
     public String name;
     public int duration;
     public String startEnd;
-    public Task[] tasks;
+    public ArrayList<Task> tasks;
     public String note;
 
-    public Sprint(String name, int duration, String startEnd, Task[] tasks, String note) {
+    public Sprint(String name, int duration, String startEnd, ArrayList<Task> tasks, String note) {
         this.name = name;
         this.duration = duration;
         this.startEnd = startEnd;

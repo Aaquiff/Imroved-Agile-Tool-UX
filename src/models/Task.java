@@ -26,6 +26,13 @@ public class Task {
     private SimpleStringProperty project = new SimpleStringProperty("");
     private SimpleStringProperty sprint = new SimpleStringProperty("");
 
+    public Task(String pid,String pproject) {
+        id.set(pid);
+        project.set(pproject);
+    }
+
+    
+    
     public Task(String pid, String ptitle, String pdescription, String porigin, String ptype, int pbv, int pw, String ptarget, String pstatus, String pproject, String psprint) {
         id.set(pid);
         title.set(ptitle);
@@ -39,6 +46,10 @@ public class Task {
         project.set(pproject);
         sprint.set(psprint);
         
+    }
+    
+    public void setStatus(String pstatus){
+        status.set(pstatus);
     }
     
     public String getId() {
