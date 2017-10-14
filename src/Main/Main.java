@@ -24,6 +24,7 @@ import javafx.stage.StageStyle;
  */
 public class Main extends Application implements EventHandler<ActionEvent> {
     Button button;
+    MainController mainCtrl = new MainController();
     @Override
     public void start(Stage primaryStage) {
       
@@ -37,7 +38,7 @@ public class Main extends Application implements EventHandler<ActionEvent> {
             
             Scene scene = new Scene(root);
             
-            //mainCtrl.tblResultsColWidth();
+            mainCtrl.tblResultsColWidth();
             
             primaryStage.setScene(scene);
             primaryStage.show();
