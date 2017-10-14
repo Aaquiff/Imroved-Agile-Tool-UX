@@ -37,11 +37,12 @@ public class Main extends Application implements EventHandler<ActionEvent> {
             primaryStage.setMaximized(true);
             
             Scene scene = new Scene(root);
-            
-            mainCtrl.tblResultsColWidth();
+                     
             
             primaryStage.setScene(scene);
             primaryStage.show();
+            
+            //mainCtrl.tblResultsColWidth();
             
         } catch (IOException ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
