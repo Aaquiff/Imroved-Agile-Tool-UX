@@ -16,6 +16,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import javax.swing.JOptionPane;
 import models.memberDetails;
 
 public class MemberPageController {
@@ -97,20 +98,28 @@ if(     txtInternalNumber.getText()!=null
 
     @FXML
     public void updateMember(ActionEvent event) {
-        Stage dialogBox = new Stage();
+        
+         int result = JOptionPane.showConfirmDialog(null, "Are you sure you want to update this Member");
+         if(result == 0){
+         Stage dialogBox = new Stage();
         dialogBox.initStyle(StageStyle.UTILITY);
         Scene scene = new Scene(new Group(new Text(25,25,"Updated Successfully")));
         dialogBox.setScene(scene);
         dialogBox.show();
+         }
     }
 
     @FXML
     public void deleteMember(ActionEvent event) {
-        Stage dialogBox = new Stage();
-        dialogBox.initStyle(StageStyle.UTILITY);
-        Scene scene = new Scene(new Group(new Text(25,25,"Deleted Successfully")));
-        dialogBox.setScene(scene);
-        dialogBox.show();
+         int result = JOptionPane.showConfirmDialog(null, "Are you sure you want to delete this Member");
+         if(result ==0){
+              Stage dialogBox = new Stage();
+            dialogBox.initStyle(StageStyle.UTILITY);
+            Scene scene = new Scene(new Group(new Text(25,25,"Deleted Successfully")));
+             dialogBox.setScene(scene);
+             dialogBox.show();
+         }
+       
     }
 
 }
