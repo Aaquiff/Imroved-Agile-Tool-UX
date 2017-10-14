@@ -29,12 +29,15 @@ public class Main extends Application implements EventHandler<ActionEvent> {
       
         try {
             String mainPage = "MainPage.fxml";
-            mainPage = "SprintPage.fxml";
+            //mainPage = "SprintPage.fxml";
+            mainPage = "MainPage.fxml";
             Parent root = FXMLLoader.load(getClass().getResource(mainPage));
             primaryStage.initStyle(StageStyle.DECORATED);
             primaryStage.setMaximized(true);
             
             Scene scene = new Scene(root);
+            
+            //mainCtrl.tblResultsColWidth();
             
             primaryStage.setScene(scene);
             primaryStage.show();
