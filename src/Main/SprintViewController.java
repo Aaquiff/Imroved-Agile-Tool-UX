@@ -1,25 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Main;
 
-import java.awt.EventQueue;
-import java.awt.Image;
-import java.io.IOException;
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import models.Sprint;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
+import javafx.geometry.Insets;
 import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
@@ -27,22 +14,25 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.SplitPane;
 import javafx.scene.control.TableView;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.stage.Stage;
 import javax.swing.JOptionPane;
 import models.Task;
 
-/**
- *
- * @author aaralk
- */
 public class SprintViewController {
+    
     boolean isNavigatorVisible;
-    
     Sprint currentSprint;
-    
     Node componentsPane;
 
+    @FXML
+    public Button btnNewSprint;
+    @FXML
+    public Button btnDelete;
+    @FXML
+    public Button btnEditSprint;
+    @FXML
+    public Button btnHamburger;
     @FXML
     public Button btnNotes;
     @FXML
@@ -66,21 +56,23 @@ public class SprintViewController {
 
     ArrayList<Sprint> sprints = new ArrayList<Sprint>();
     
+    public static final ObservableList data = FXCollections.observableArrayList();
 
-    public static final ObservableList data
-            = FXCollections.observableArrayList();
+    public static final ObservableList newTasks = FXCollections.observableArrayList();
 
-    public static final ObservableList newTasks
-            = FXCollections.observableArrayList();
+    public static final ObservableList tasksInProgress = FXCollections.observableArrayList();
 
-    public static final ObservableList tasksInProgress
-            = FXCollections.observableArrayList();
-
-    public static final ObservableList tasksDone
-            = FXCollections.observableArrayList();
+    public static final ObservableList tasksDone = FXCollections.observableArrayList();
     
-    public void RefreshCurrent()
-    {
+    public void InitializeGraphics() {
+        btnHamburger.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("resources/img/menu.png"),25,25,false,false)));
+        btnNotes.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("resources/img/notes.png"),100,100,false,false)));
+        btnDelete.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("resources/img/delete.png"),30,30,false,false)));
+        btnNewSprint.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("resources/img/add.png"),30,30,false,false)));
+        btnEditSprint.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("resources/img/edit.png"),30,30,false,false)));
+    }
+    
+    public void RefreshCurrent() {
         ShowSprint(currentSprint.name);
     }
     
@@ -158,6 +150,8 @@ public class SprintViewController {
 
     public void initialize() {
 
+        InitializeGraphics();
+                
         componentsPane=mainSplitPlane.getItems().get(0); 
         
         mainSplitPlane.getItems().remove(componentsPane);
@@ -242,5 +236,9 @@ public class SprintViewController {
             alert.showAndWait();
 
         }
+    }
+    
+    public void EditTask(){
+        System.out.println("Edit");
     }
 }
