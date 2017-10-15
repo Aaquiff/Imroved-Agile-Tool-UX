@@ -21,6 +21,24 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane id="AnchorPane" prefHeight="696.0" prefWidth="1029.0" style="-fx-background-color: White;" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.MainPageController">
    <children>
@@ -28,83 +46,326 @@
         <tabs>
           <Tab text="Sprints">
                <content>
-                  <SplitPane dividerPositions="0.23323615160349853" prefHeight="160.0" prefWidth="200.0" style="-fx-background-color: White;">
-                    <items>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #263238;" SplitPane.resizableWithParent="false" />
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-                           <children>
-                              <SplitPane dividerPositions="0.3053" layoutX="25.0" layoutY="203.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" style="-fx-background-color: White;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                <items>
-                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="225.0" prefWidth="784.0">
-                                       <children>
-                                          <Label layoutX="14.0" text="Sprint 1">
+                  <AnchorPane prefHeight="778.0" prefWidth="1160.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="383.0" minHeight="10.0" prefHeight="50.0" vgrow="NEVER" />
+                <RowConstraints minHeight="10.0" vgrow="ALWAYS" />
+            </rowConstraints>
+            <children>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" GridPane.vgrow="NEVER">
+                    <children>
+                        <Pane prefHeight="53.0" prefWidth="1160.0" style="-fx-background-color: #263238;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <Button fx:id="btnHamburger" layoutX="5.0" layoutY="5.0" mnemonicParsing="false" onAction="#ToggleNavigatorPane" onMouseEntered="#ToggleNavigatorPane" prefHeight="36.0" prefWidth="39.0" style="-fx-background-color: White;" textFill="WHITE" />
+                                <Button fx:id="btnNewSprint" layoutX="51.0" layoutY="5.0" mnemonicParsing="false" onAction="#NewSprint" prefHeight="36.0" prefWidth="115.0" style="-fx-background-color: #ecf0f1;" text="New Sprint" />
+                                <Button fx:id="btnDelete" layoutX="171.0" layoutY="5.0" mnemonicParsing="false" onAction="#DeleteSprint" prefHeight="36.0" prefWidth="128.0" style="-fx-background-color: #ecf0f1;" text="Delete Sprint" />
+                        <Button fx:id="btnEditSprint" layoutX="305.0" layoutY="5.0" mnemonicParsing="false" onAction="#EditSprint" prefHeight="36.0" prefWidth="115.0" style="-fx-background-color: #ecf0f1;" text="Edit Sprint" />
+                            </children>
+                        </Pane>
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+                    <children>
+      
+                        <SplitPane fx:id="mainSplitPlane" dividerPositions="0.23323615160349853" style="-fx-background-color: White;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <items>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" onMouseExited="#ToggleNavigatorPane" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #263238;" SplitPane.resizableWithParent="false">
+                                    <children>
+                                        <ListView fx:id="navigatorListView" layoutX="19.0" layoutY="185.0" onMouseClicked="#changeSprint" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #263238;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <opaqueInsets>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="100.0" />
+                                            </opaqueInsets>
+                                        </ListView>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                    <children>
+                                        <SplitPane dividerPositions="0.43784530386740333" layoutX="25.0" layoutY="203.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" style="-fx-background-color: White;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <items>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="282.0" prefWidth="883.0" SplitPane.resizableWithParent="false">
+                                                    <children>
+                                                        <Label fx:id="sprintNumber" layoutX="14.0" layoutY="14.0" text="Sprint #">
+                                                            <font>
+                                                                <Font size="33.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label fx:id="sprintDuration" layoutX="17.0" layoutY="90.0" text="#">
+                                                            <font>
+                                                                <Font size="18.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label fx:id="sprintStartEnd" layoutX="17.0" layoutY="63.0" text="#">
+                                                            <font>
+                                                                <Font size="18.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <AnchorPane layoutX="273.0" layoutY="132.0" minHeight="0.0" minWidth="0.0" prefHeight="118.0" prefWidth="151.0" style="-fx-background-color: #F7CA18; -fx-border-color: #bdc3c7;">
+                                                            <children>
+                                                                <ProgressBar layoutX="14.0" layoutY="14.0" prefHeight="18.0" prefWidth="252.0" progress="0.88" style="-fx-accent: #F7CA18;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                                <Label layoutX="14.0" layoutY="35.0" text="Available" />
+                                                                <Label layoutX="75.0" layoutY="35.0" text="Total Work" />
+                                                <Label layoutX="17.0" layoutY="52.0" text="10">
+                                                   <font>
+                                                      <Font name="System Bold" size="36.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="94.0" layoutY="52.0" text="2">
+                                                   <font>
+                                                      <Font name="System Bold" size="36.0" />
+                                                   </font>
+                                                </Label>
+                                                            </children>
+                                                        </AnchorPane>
+                                                        <AnchorPane layoutX="11.0" layoutY="132.0" minHeight="0.0" minWidth="0.0" prefHeight="118.0" prefWidth="254.0" style="-fx-background-color: #87D37C; -fx-border-color: #bdc3c7;">
+                                                            <children>
+                                                                <ProgressBar layoutX="9.6" layoutY="19.6" prefHeight="18.0" prefWidth="255.0" progress="0.68" style="-fx-accent: #87D37C;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                                <Label layoutX="14.0" layoutY="33.0" text="We can do" />
+                                                                <Label layoutX="85.0" layoutY="33.0" text="We have done" />
+                                                                <Label layoutX="175.0" layoutY="33.0" text="We must do" />
+                                                                <Label layoutX="23.0" layoutY="50.0" text="10">
+                                                                    <font>
+                                                                        <Font name="System Bold" size="36.0" />
+                                                                    </font>
+                                                                </Label>
+                                                                <Label layoutX="117.0" layoutY="50.0" text="6">
+                                                                    <font>
+                                                                        <Font name="System Bold" size="36.0" />
+                                                                    </font>
+                                                                </Label>
+                                                                <Label layoutX="195.0" layoutY="50.0" text="4">
+                                                                    <font>
+                                                                        <Font name="System Bold" size="36.0" />
+                                                                    </font>
+                                                                </Label>
+                                                            </children>
+                                                        </AnchorPane>
+                                                        <Button fx:id="btnNotes" alignment="BOTTOM_CENTER" contentDisplay="BOTTOM" layoutX="718.0" layoutY="18.0" mnemonicParsing="false" onAction="#Note" prefHeight="118.0" prefWidth="151.0" style="-fx-background-color: White;" text="Notes" textFill="#030303" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                        <Button layoutX="11.0" layoutY="264.0" mnemonicParsing="false" onAction="#AddTask" prefHeight="36.0" prefWidth="94.0" style="-fx-background-color: #3498db;" text="Add Task" textFill="WHITE" />
+                                          <Label layoutX="705.0" layoutY="261.0" text="Scrum Board" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
                                              <font>
-                                                <Font size="33.0" />
+                                                <Font name="System Bold" size="29.0" />
                                              </font>
                                           </Label>
-                                          <Label layoutX="14.0" layoutY="79.0" text="22nd August - 4th September" />
-                                          <Label layoutX="14.0" layoutY="49.0" text="10 Days">
-                                             <font>
-                                                <Font size="18.0" />
-                                             </font>
-                                          </Label>
-                                          <TitledPane animated="false" layoutX="207.0" layoutY="7.0" prefHeight="179.0" prefWidth="256.0" text="Velocity">
-                                            <content>
-                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="137.0" prefWidth="254.0" style="-fx-background-color: White;">
-                                                   <children>
-                                                      <ProgressBar layoutX="9.6" layoutY="19.6" prefHeight="18.0" prefWidth="255.0" progress="0.68" style="-fx-accent: green;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                                                      <Label layoutX="14.0" layoutY="33.0" text="We can do" />
-                                                      <Label layoutX="85.0" layoutY="33.0" text="We have done" />
-                                                      <Label layoutX="175.0" layoutY="33.0" text="We must do" />
-                                                      <Label layoutX="30.0" layoutY="50.0" text="10">
-                                                         <font>
-                                                            <Font size="24.0" />
-                                                         </font>
-                                                      </Label>
-                                                      <Label layoutX="117.0" layoutY="50.0" text="6">
-                                                         <font>
-                                                            <Font size="24.0" />
-                                                         </font>
-                                                      </Label>
-                                                      <Label layoutX="195.0" layoutY="50.0" text="4">
-                                                         <font>
-                                                            <Font size="24.0" />
-                                                         </font>
-                                                      </Label>
-                                                   </children>
+                                          <Button layoutX="112.0" layoutY="264.0" mnemonicParsing="false" onAction="#RemoveTask" prefHeight="36.0" prefWidth="100.0" style="-fx-background-color: #3498db;" text="Remove Task" textFill="WHITE" />
+                                                    </children>
                                                 </AnchorPane>
-                                            </content>
-                                          </TitledPane>
-                                          <TitledPane animated="false" layoutX="476.0" layoutY="7.0" prefHeight="178.0" prefWidth="231.0" text="Work Management">
-                                            <content>
-                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="152.0" prefWidth="141.0" style="-fx-background-color: White;">
-                                                   <children>
-                                                      <ProgressBar layoutX="14.0" layoutY="14.0" prefHeight="18.0" prefWidth="252.0" progress="0.88" style="-fx-accent: Yellow;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                                                      <Label layoutX="14.0" layoutY="35.0" text="Available" />
-                                                      <Label layoutX="25.0" layoutY="52.0" text="95">
-                                                         <font>
-                                                            <Font size="24.0" />
-                                                         </font>
-                                                      </Label>
-                                                      <Label layoutX="142.0" layoutY="35.0" text="Total Work" />
-                                                      <Label layoutX="165.0" layoutY="52.0" text="5">
-                                                         <font>
-                                                            <Font size="24.0" />
-                                                         </font>
-                                                      </Label>
-                                                   </children>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="421.0" prefWidth="885.0">
+                                                    <children>
+                                                        <VBox layoutX="305.0" layoutY="79.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                            <children>
+                                                                <Separator prefWidth="200.0" style="-fx-background-color: Yellow;" />
+                                                                <TitledPane animated="false" text="New">
+                                                                    <content>
+                                                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                                            <children>
+                                                                                <TableView fx:id="newTable" prefHeight="142.0" prefWidth="848.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                                    <columns>
+                                                                                        <TableColumn prefWidth="75.0" text="Id">
+                                                                                            <cellValueFactory>
+                                                                                                <PropertyValueFactory property="id" />
+                                                                                            </cellValueFactory>
+                                                                                        </TableColumn>
+                                                                                        <TableColumn prefWidth="75.0" text="Title">
+                                                                                            <cellValueFactory>
+                                                                                                <PropertyValueFactory property="title" />
+                                                                                            </cellValueFactory>
+                                                                                        </TableColumn>
+                                                                                        <TableColumn prefWidth="75.0" text="Description">
+                                                                                            <cellValueFactory>
+                                                                                                <PropertyValueFactory property="description" />
+                                                                                            </cellValueFactory>
+                                                                                        </TableColumn>
+                                                                                        <TableColumn prefWidth="75.0" text="Origin">
+                                                                                            <cellValueFactory>
+                                                                                                <PropertyValueFactory property="origin" />
+                                                                                            </cellValueFactory>
+                                                                                        </TableColumn>
+                                                                                        <TableColumn prefWidth="75.0" text="Type">
+                                                                                            <cellValueFactory>
+                                                                                                <PropertyValueFactory property="type" />
+                                                                                            </cellValueFactory>
+                                                                                        </TableColumn>
+                                                                                        <TableColumn prefWidth="75.0" text="BV">
+                                                                                            <cellValueFactory>
+                                                                                                <PropertyValueFactory property="bv" />
+                                                                                            </cellValueFactory>
+                                                                                        </TableColumn>
+                                                                                        <TableColumn prefWidth="75.0" text="Weight">
+                                                                                            <cellValueFactory>
+                                                                                                <PropertyValueFactory property="w" />
+                                                                                                
+                                                                                            </cellValueFactory>
+                                                                                        </TableColumn>
+                                                                                        <TableColumn prefWidth="75.0" text="Target">
+                                                                                            <cellValueFactory>
+                                                                                                <PropertyValueFactory property="target" />
+                                                                                            </cellValueFactory>
+                                                                                        </TableColumn>
+                                                                                        <TableColumn prefWidth="75.0" text="Status">
+                                                                                            <cellValueFactory>
+                                                                                                <PropertyValueFactory property="status" />
+                                                                                            </cellValueFactory>
+                                                                                        </TableColumn>
+                                                                                        <TableColumn prefWidth="75.0" text="Project">
+                                                                                            <cellValueFactory>
+                                                                                                <PropertyValueFactory property="project" />
+                                                                                            </cellValueFactory>
+                                                                                        </TableColumn>
+ 
+                                                                                          </columns>
+                                                                                </TableView>
+                                                                            </children>
+                                                                        </AnchorPane>
+                                                                    </content>
+                                                                </TitledPane>
+                                                                <Separator prefWidth="200.0" style="-fx-background-color: Green;" />
+                                                                <TitledPane animated="false" text="In Progress">
+                                                                    <content>
+                                                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                                            <children>
+                                                                                <TableView fx:id="inProgressTable" prefHeight="142.0" prefWidth="848.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                                    <columns>
+                                                                                        <TableColumn prefWidth="75.0" text="Id">
+                                                                                            <cellValueFactory>
+                                                                                                <PropertyValueFactory property="id" />
+                                                                                            </cellValueFactory>
+                                                                                        </TableColumn>
+                                                                                        <TableColumn prefWidth="75.0" text="Title">
+                                                                                            <cellValueFactory>
+                                                                                                <PropertyValueFactory property="title" />
+                                                                                            </cellValueFactory>
+                                                                                        </TableColumn>
+                                                                                        <TableColumn prefWidth="75.0" text="Description">
+                                                                                            <cellValueFactory>
+                                                                                                <PropertyValueFactory property="description" />
+                                                                                            </cellValueFactory>
+                                                                                        </TableColumn>
+                                                                                        <TableColumn prefWidth="75.0" text="Origin">
+                                                                                            <cellValueFactory>
+                                                                                                <PropertyValueFactory property="origin" />
+                                                                                            </cellValueFactory>
+                                                                                        </TableColumn>
+                                                                                        <TableColumn prefWidth="75.0" text="Type">
+                                                                                            <cellValueFactory>
+                                                                                                <PropertyValueFactory property="type" />
+                                                                                            </cellValueFactory>
+                                                                                        </TableColumn>
+                                                                                        <TableColumn prefWidth="75.0" text="BV">
+                                                                                            <cellValueFactory>
+                                                                                                <PropertyValueFactory property="bv" />
+                                                                                            </cellValueFactory>
+                                                                                        </TableColumn>
+                                                                                        <TableColumn prefWidth="75.0" text="Weight">
+                                                                                            <cellValueFactory>
+                                                                                                <PropertyValueFactory property="w" />
+                                                                                            </cellValueFactory>
+                                                                                        </TableColumn>
+                                                                                        <TableColumn prefWidth="75.0" text="Target">
+                                                                                            <cellValueFactory>
+                                                                                                <PropertyValueFactory property="target" />
+                                                                                            </cellValueFactory>
+                                                                                        </TableColumn>
+                                                                                        <TableColumn prefWidth="75.0" text="Status">
+                                                                                            <cellValueFactory>
+                                                                                                <PropertyValueFactory property="status" />
+                                                                                            </cellValueFactory>
+                                                                                        </TableColumn>
+                                                                                        <TableColumn prefWidth="75.0" text="Project">
+                                                                                            <cellValueFactory>
+                                                                                                <PropertyValueFactory property="project" />
+                                                                                            </cellValueFactory>
+                                                                                        </TableColumn>
+                                                                                    </columns>
+                                                                                </TableView>
+                                                                            </children>
+                                                                        </AnchorPane>
+                                                                    </content>
+                                                                </TitledPane>
+                                                                <Separator prefWidth="200.0" style="-fx-background-color: Red;" />
+                                                                <TitledPane animated="false" text="Resolved">
+                                                                    <content>
+                                                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                                            <children>
+                                                                                <TableView fx:id="doneTable" prefHeight="142.0" prefWidth="848.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                                    <columns>
+                                                                                        <TableColumn prefWidth="75.0" text="Id">
+                                                                                            <cellValueFactory>
+                                                                                                <PropertyValueFactory property="id" />
+                                                                                            </cellValueFactory>
+                                                                                        </TableColumn>
+                                                                                        <TableColumn prefWidth="75.0" text="Title">
+                                                                                            <cellValueFactory>
+                                                                                                <PropertyValueFactory property="title" />
+                                                                                            </cellValueFactory>
+                                                                                        </TableColumn>
+                                                                                        <TableColumn prefWidth="75.0" text="Description">
+                                                                                            <cellValueFactory>
+                                                                                                <PropertyValueFactory property="description" />
+                                                                                            </cellValueFactory>
+                                                                                        </TableColumn>
+                                                                                        <TableColumn prefWidth="75.0" text="Origin">
+                                                                                            <cellValueFactory>
+                                                                                                <PropertyValueFactory property="origin" />
+                                                                                            </cellValueFactory>
+                                                                                        </TableColumn>
+                                                                                        <TableColumn prefWidth="75.0" text="Type">
+                                                                                            <cellValueFactory>
+                                                                                                <PropertyValueFactory property="type" />
+                                                                                            </cellValueFactory>
+                                                                                        </TableColumn>
+                                                                                        <TableColumn prefWidth="75.0" text="BV">
+                                                                                            <cellValueFactory>
+                                                                                                <PropertyValueFactory property="bv" />
+                                                                                            </cellValueFactory>
+                                                                                        </TableColumn>
+                                                                                        <TableColumn prefWidth="75.0" text="Weight">
+                                                                                            <cellValueFactory>
+                                                                                                <PropertyValueFactory property="w" />
+                                                                                            </cellValueFactory>
+                                                                                        </TableColumn>
+                                                                                        <TableColumn prefWidth="75.0" text="Target">
+                                                                                            <cellValueFactory>
+                                                                                                <PropertyValueFactory property="target" />
+                                                                                            </cellValueFactory>
+                                                                                        </TableColumn>
+                                                                                        <TableColumn prefWidth="75.0" text="Status">
+                                                                                            <cellValueFactory>
+                                                                                                <PropertyValueFactory property="status" />
+                                                                                            </cellValueFactory>
+                                                                                        </TableColumn>
+                                                                                        <TableColumn prefWidth="75.0" text="Project">
+                                                                                            <cellValueFactory>
+                                                                                                <PropertyValueFactory property="project" />
+                                                                                            </cellValueFactory>
+                                                                                        </TableColumn>
+                                                                                    </columns>
+                                                                                </TableView>
+                                                                            </children>
+                                                                        </AnchorPane>
+                                                                    </content>
+                                                                </TitledPane>
+                                                            </children>
+                                                        </VBox>
+                                                    </children>
                                                 </AnchorPane>
-                                            </content>
-                                          </TitledPane>
-                                       </children>
-                                    </AnchorPane>
-                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
-                                </items>
-                              </SplitPane>
-                           </children>
-                        </AnchorPane>
-                    </items>
-                  </SplitPane>
+                                            </items>
+                                        </SplitPane>
+                                    </children>
+                                </AnchorPane>
+                            </items>
+                        </SplitPane>
+                    </children>
+                </AnchorPane>
+            </children>
+        </GridPane>
+    </children>
+</AnchorPane>
+
                </content>
           </Tab>
             <Tab text="Member">
