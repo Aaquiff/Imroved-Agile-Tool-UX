@@ -5,6 +5,7 @@
  */
 package models;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -16,8 +17,8 @@ public class Project {
     public String name = "";
     public String description = "";
     public ArrayList<Target> targetList;
-    public Date startDate;
-    public Date endDate;
+    public LocalDate startDate;
+    public LocalDate endDate;
     
     public Project(String name, String desc, ArrayList<Target> targets)
     {
@@ -26,7 +27,7 @@ public class Project {
         this.targetList = targets;
     }
     
-    public Project(String Name, Date StartDate, Date EndDate, String Description)
+    public Project(String Name, LocalDate StartDate, LocalDate EndDate, String Description)
     {
         this.name = Name;
         this.startDate = StartDate;
