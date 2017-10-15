@@ -32,6 +32,7 @@ public class Main extends Application implements EventHandler<ActionEvent> {
             String mainPage = "MainPage.fxml";
            // mainPage = "SprintPage.fxml";
             mainPage = "MainPage.fxml";
+           // mainPage = "ProjectsPage.fxml";
             Parent root = FXMLLoader.load(getClass().getResource(mainPage));
             primaryStage.initStyle(StageStyle.DECORATED);
             primaryStage.setMaximized(true);
