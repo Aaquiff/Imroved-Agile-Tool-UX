@@ -3992,7 +3992,7 @@
                                                       <Label layoutX="76.0" layoutY="76.0" text="11/11/2017" />
                                                       <Button fx:id="Targets_Delete1" layoutX="255.0" layoutY="77.0" mnemonicParsing="false" text="Delete" />
                                                    </children></Pane>
-                                                <Pane layoutX="22.0" layoutY="155.0" prefHeight="114.0" prefWidth="326.0" style="-fx-background-color: #e6e600;">
+                                                <Pane layoutX="22.0" layoutY="155.0" prefHeight="114.0" prefWidth="326.0" style="-fx-background-color: #e6e600;" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="22.0">
                                                    <children>
                                                       <Label layoutX="24.0" layoutY="21.0" text="ID">
                                                          <font>
@@ -4018,7 +4018,7 @@
                                              </children></AnchorPane>
                                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                                              <children>
-                                                <Pane layoutX="22.0" layoutY="21.0" prefHeight="114.0" prefWidth="326.0" style="-fx-background-color: #e6e600;">
+                                                <Pane layoutX="22.0" layoutY="21.0" prefHeight="114.0" prefWidth="326.0" style="-fx-background-color: #e6e600;" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="20.0">
                                                    <children>
                                                       <Label layoutX="24.0" layoutY="21.0" text="ID">
                                                          <font>

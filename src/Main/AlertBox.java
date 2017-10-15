@@ -18,7 +18,7 @@ import javafx.stage.Stage;
  * @author lathlk
  */
 public class AlertBox {
-    public static void display(String title, String message)
+    public static void display(String title, String message, String btnText)
     {
         Stage alertWindow = new Stage();
         alertWindow.initModality(Modality.APPLICATION_MODAL);
@@ -26,7 +26,7 @@ public class AlertBox {
         alertWindow.setMinWidth(250);
         Label label = new Label();
         label.setText(message);
-        Button btnOk = new Button("OK");
+        Button btnOk = new Button(btnText);
         btnOk.setOnAction(e -> alertWindow.close());
         VBox view = new VBox(10);
         view.getChildren().addAll(label, btnOk);

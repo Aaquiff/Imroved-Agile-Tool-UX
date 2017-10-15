@@ -109,12 +109,12 @@ public class MainPageController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         
         // Targets Screen
-        getTargetScreenData();
+        InitializeTargetScreenData();
         // Targets Screen
         initializeSprint();
     }    
 
-    private void getTargetScreenData() {
+    private void InitializeTargetScreenData() {
         TargetsScreen_DummyData dummy = new TargetsScreen_DummyData();        
         ArrayList<Project> projects = dummy.getDummyProjects();        
         projectsList.clear();
@@ -125,7 +125,11 @@ public class MainPageController implements Initializable {
         }
         projectsList.addAll(projNames);
         Targets_ProjectsList.setItems(projectsList);
-        Targets_ProjectsList.getSelectionModel().selectedItemProperty().addListener(projectListItemSelected);        
+        Targets_ProjectsList.getSelectionModel().selectedItemProperty().addListener(projectListItemSelected); 
+        
+        Targets_Delete1.setOnAction(e-> AlertBox.display("Delete!!!", "Are you sure?", "Yes"));
+        Targets_Delete2.setOnAction(e-> AlertBox.display("Delete!!!", "Are you sure?", "Yes"));
+        Targets_Delete3.setOnAction(e-> AlertBox.display("Delete!!!", "Are you sure?", "Yes"));
     }
     
     private final ChangeListener<String> projectListItemSelected = new ChangeListener<String>() {
