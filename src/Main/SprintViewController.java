@@ -1,6 +1,7 @@
 package Main;
 
 import java.util.ArrayList;
+import java.util.Date;
 import models.Sprint;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -54,7 +55,7 @@ public class SprintViewController {
     @FXML
     public TableView doneTable;
 
-    ArrayList<Sprint> sprints = new ArrayList<Sprint>();
+    ArrayList<Sprint> sprints = new ArrayList<>();
     
     public static final ObservableList data = FXCollections.observableArrayList();
 
@@ -70,6 +71,10 @@ public class SprintViewController {
         btnDelete.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("resources/img/delete.png"),30,30,false,false)));
         btnNewSprint.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("resources/img/add.png"),30,30,false,false)));
         btnEditSprint.setGraphic(new ImageView(new Image(getClass().getResourceAsStream("resources/img/edit.png"),30,30,false,false)));
+        
+        componentsPane=mainSplitPlane.getItems().get(0); 
+        mainSplitPlane.getItems().remove(componentsPane);
+        isNavigatorVisible = false;
     }
     
     public void RefreshCurrent() {
@@ -81,7 +86,7 @@ public class SprintViewController {
         dialog.setVisible(true);
         if(dialog.isAdded)
         {
-            Sprint sprint = new Sprint(dialog.name, dialog.duration, "", null, "");
+            Sprint sprint = dialog.sprint;
             sprints.add(sprint);
             data.add(sprint.name);
             
@@ -93,6 +98,25 @@ public class SprintViewController {
             alert.showAndWait();
 
         }
+    }
+    
+    public void EditSprint() {
+        dlgEditSprint dialog = new dlgEditSprint(null,true,currentSprint);
+        dialog.setVisible(true);
+//        if(dialog.isAdded)
+//        {
+//            Sprint sprint = dialog.sprint;
+//            sprints.add(sprint);
+//            data.add(sprint.name);
+//            
+//            Alert alert = new Alert(AlertType.INFORMATION);
+//            alert.setTitle("Information");
+//            alert.setHeaderText("Sprint Added");
+//            alert.setContentText("Add tasks to sprint to make it more interesting");
+//
+//            alert.showAndWait();
+//
+//        }
     }
     
     public void DeleteSprint() {
@@ -122,8 +146,8 @@ public class SprintViewController {
         for (Sprint s : sprints) {
             if (s.name.equals(sprint)) {
                 sprintNumber.setText(s.name);
-                sprintDuration.setText(Integer.toString(s.duration));
-                sprintStartEnd.setText(s.startEnd);
+                sprintDuration.setText(Long.toString(s.duration)+" Days");
+                sprintStartEnd.setText(s.startEnd());
 
                 newTasks.clear();
                 tasksInProgress.clear();
@@ -151,31 +175,23 @@ public class SprintViewController {
     public void initialize() {
 
         InitializeGraphics();
-                
-        componentsPane=mainSplitPlane.getItems().get(0); 
-        
-        mainSplitPlane.getItems().remove(componentsPane);
-        isNavigatorVisible = false;
-        
+
         ArrayList<Task> tasks = new ArrayList<Task>();
-        
-        
+
         tasks.add(new Task("1", "Task 1", "First Task", "origin", "US", 5, 34, "Release1", "New", "Mfin", "1") );
         tasks.add(new Task("2", "Task 2", "Second Task", "origin", "US", 5, 34, "Release2", "New", "Mfin", "1") );
         tasks.add(new Task("3", "Task 3", "Third Task", "origin", "US", 5, 34, "Release2", "In Progress", "Mfin", "1") );
         tasks.add(new Task("4", "Task 4", "Fourth Task", "origin", "US", 5, 34, "Release3", "Done", "Mfin", "1") );
         tasks.add(new Task("5", "Task 5", "Five Task", "origin", "US", 5, 34, "Release4", "Done", "Mfin", "1") );
 
-        sprints.add(new Sprint("Sprint 1", 10, "22nd August - 4th September", tasks, ""));
-        sprints.add(new Sprint("Sprint 2", 12, "23 February - 4th March", tasks, ""));
-        sprints.add(new Sprint("Sprint 3", 5, "2nd March - 4th May", tasks, ""));
-        sprints.add(new Sprint("Sprint 4", 11, "12th May - 4th September", tasks, ""));
-        sprints.add(new Sprint("Sprint 5", 12, "22nd September - 4th December", tasks, ""));
-        sprints.add(new Sprint("Sprint 6", 40, "1st August - 4th September", tasks, ""));
-        sprints.add(new Sprint("Sprint 7", 20, "4th June - 4th July", tasks, ""));
-        sprints.add(new Sprint("Sprint 8", 10, "24th January - 4th November", tasks, ""));
-        sprints.add(new Sprint("Sprint 9", 21, "12th November - 4th January", tasks, ""));
-        sprints.add(new Sprint("Sprint 10", 43, "7th March - 4th September", tasks, ""));
+        sprints.add(new Sprint("Sprint 1", new Date(117,8,24), new Date(117,11,24), tasks, ""));
+        sprints.add(new Sprint("Sprint 2", new Date(117,2,12), new Date(117,5,12), tasks, ""));
+        sprints.add(new Sprint("Sprint 3", new Date(117,7,3), new Date(117,8,2), tasks, ""));
+        sprints.add(new Sprint("Sprint 4", new Date(117,5,5), new Date(117,6,21), tasks, ""));
+        sprints.add(new Sprint("Sprint 5", new Date(117,2,4), new Date(117,7,4), tasks, ""));
+        sprints.add(new Sprint("Sprint 6", new Date(117,1,12), new Date(117,3,7), tasks, ""));
+        sprints.add(new Sprint("Sprint 7", new Date(117,3,28), new Date(117,6,30), tasks, ""));
+        sprints.add(new Sprint("Sprint 8", new Date(117,7,12), new Date(117,8,2), tasks, ""));
         
         
         LoadData();
@@ -238,7 +254,11 @@ public class SprintViewController {
         }
     }
     
-    public void EditTask(){
+    public void EditTask() {
         System.out.println("Edit");
+    }
+    
+    public void RemoveTask() { 
+        
     }
 }

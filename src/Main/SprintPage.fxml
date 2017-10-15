@@ -36,8 +36,8 @@
                             <children>
                                 <Button fx:id="btnHamburger" layoutX="5.0" layoutY="5.0" mnemonicParsing="false" onAction="#ToggleNavigatorPane" onMouseEntered="#ToggleNavigatorPane" prefHeight="36.0" prefWidth="39.0" style="-fx-background-color: White;" textFill="WHITE" />
                                 <Button fx:id="btnNewSprint" layoutX="51.0" layoutY="5.0" mnemonicParsing="false" onAction="#NewSprint" prefHeight="36.0" prefWidth="115.0" style="-fx-background-color: #ecf0f1;" text="New Sprint" />
-                                <Button fx:id="btnDelete" layoutX="171.0" layoutY="5.0" mnemonicParsing="false" onAction="#DeleteSprint" prefHeight="36.0" prefWidth="115.0" style="-fx-background-color: #ecf0f1;" text="Delete Sprint" />
-                        <Button fx:id="btnEditSprint" layoutX="291.0" layoutY="5.0" mnemonicParsing="false" onAction="#EditTask" prefHeight="36.0" prefWidth="115.0" style="-fx-background-color: #ecf0f1;" text="Edit Sprint" />
+                                <Button fx:id="btnDelete" layoutX="171.0" layoutY="5.0" mnemonicParsing="false" onAction="#DeleteSprint" prefHeight="36.0" prefWidth="128.0" style="-fx-background-color: #ecf0f1;" text="Delete Sprint" />
+                        <Button fx:id="btnEditSprint" layoutX="305.0" layoutY="5.0" mnemonicParsing="false" onAction="#EditSprint" prefHeight="36.0" prefWidth="115.0" style="-fx-background-color: #ecf0f1;" text="Edit Sprint" />
                             </children>
                         </Pane>
                     </children>
@@ -77,24 +77,24 @@
                                                                 <Font size="18.0" />
                                                             </font>
                                                         </Label>
-                                                        <AnchorPane layoutX="273.0" layoutY="132.0" minHeight="0.0" minWidth="0.0" prefHeight="118.0" prefWidth="151.0" style="-fx-background-color: #ecf0f1; -fx-border-color: #bdc3c7;">
+                                                        <AnchorPane layoutX="273.0" layoutY="132.0" minHeight="0.0" minWidth="0.0" prefHeight="118.0" prefWidth="151.0" style="-fx-background-color: #F7CA18; -fx-border-color: #bdc3c7;">
                                                             <children>
                                                                 <ProgressBar layoutX="14.0" layoutY="14.0" prefHeight="18.0" prefWidth="252.0" progress="0.88" style="-fx-accent: #F7CA18;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                                                                 <Label layoutX="14.0" layoutY="35.0" text="Available" />
-                                                                <Label layoutX="25.0" layoutY="52.0" text="95">
-                                                                    <font>
-                                                                        <Font size="36.0" />
-                                                                    </font>
-                                                                </Label>
                                                                 <Label layoutX="75.0" layoutY="35.0" text="Total Work" />
-                                                                <Label layoutX="98.0" layoutY="52.0" text="5">
-                                                                    <font>
-                                                                        <Font size="36.0" />
-                                                                    </font>
-                                                                </Label>
+                                                <Label layoutX="17.0" layoutY="52.0" text="10">
+                                                   <font>
+                                                      <Font name="System Bold" size="36.0" />
+                                                   </font>
+                                                </Label>
+                                                <Label layoutX="94.0" layoutY="52.0" text="2">
+                                                   <font>
+                                                      <Font name="System Bold" size="36.0" />
+                                                   </font>
+                                                </Label>
                                                             </children>
                                                         </AnchorPane>
-                                                        <AnchorPane layoutX="11.0" layoutY="132.0" minHeight="0.0" minWidth="0.0" prefHeight="118.0" prefWidth="254.0" style="-fx-background-color: #ecf0f1; -fx-border-color: #bdc3c7;">
+                                                        <AnchorPane layoutX="11.0" layoutY="132.0" minHeight="0.0" minWidth="0.0" prefHeight="118.0" prefWidth="254.0" style="-fx-background-color: #87D37C; -fx-border-color: #bdc3c7;">
                                                             <children>
                                                                 <ProgressBar layoutX="9.6" layoutY="19.6" prefHeight="18.0" prefWidth="255.0" progress="0.68" style="-fx-accent: #87D37C;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                                                                 <Label layoutX="14.0" layoutY="33.0" text="We can do" />
@@ -102,17 +102,17 @@
                                                                 <Label layoutX="175.0" layoutY="33.0" text="We must do" />
                                                                 <Label layoutX="23.0" layoutY="50.0" text="10">
                                                                     <font>
-                                                                        <Font size="36.0" />
+                                                                        <Font name="System Bold" size="36.0" />
                                                                     </font>
                                                                 </Label>
                                                                 <Label layoutX="117.0" layoutY="50.0" text="6">
                                                                     <font>
-                                                                        <Font size="36.0" />
+                                                                        <Font name="System Bold" size="36.0" />
                                                                     </font>
                                                                 </Label>
                                                                 <Label layoutX="195.0" layoutY="50.0" text="4">
                                                                     <font>
-                                                                        <Font size="36.0" />
+                                                                        <Font name="System Bold" size="36.0" />
                                                                     </font>
                                                                 </Label>
                                                             </children>
@@ -121,12 +121,13 @@
                                                         <Button layoutX="11.0" layoutY="264.0" mnemonicParsing="false" onAction="#AddTask" prefHeight="36.0" prefWidth="94.0" style="-fx-background-color: #3498db;" text="Add Task" textFill="WHITE" />
                                           <Label layoutX="705.0" layoutY="261.0" text="Scrum Board" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
                                              <font>
-                                                <Font name="Microsoft Tai Le" size="29.0" />
+                                                <Font name="System Bold" size="29.0" />
                                              </font>
                                           </Label>
+                                          <Button layoutX="112.0" layoutY="264.0" mnemonicParsing="false" onAction="#RemoveTask" prefHeight="36.0" prefWidth="100.0" style="-fx-background-color: #3498db;" text="Remove Task" textFill="WHITE" />
                                                     </children>
                                                 </AnchorPane>
-                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="421.0" prefWidth="885.0">
                                                     <children>
                                                         <VBox layoutX="305.0" layoutY="79.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                             <children>
@@ -170,6 +171,7 @@
                                                                                         <TableColumn prefWidth="75.0" text="Weight">
                                                                                             <cellValueFactory>
                                                                                                 <PropertyValueFactory property="w" />
+                                                                                                
                                                                                             </cellValueFactory>
                                                                                         </TableColumn>
                                                                                         <TableColumn prefWidth="75.0" text="Target">
@@ -188,7 +190,7 @@
                                                                                             </cellValueFactory>
                                                                                         </TableColumn>
  
-                                                                                    </columns>
+                                                                                          </columns>
                                                                                 </TableView>
                                                                             </children>
                                                                         </AnchorPane>

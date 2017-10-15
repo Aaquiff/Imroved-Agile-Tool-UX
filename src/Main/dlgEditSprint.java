@@ -6,37 +6,23 @@
 package Main;
 
 import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import models.Sprint;
 
 /**
  *
  * @author aaralk
  */
-public class dlgNewSprint extends javax.swing.JDialog {
+public class dlgEditSprint extends javax.swing.JDialog {
 
+    boolean isChanged;
     public Sprint sprint;
-    public boolean isAdded = false;
-    
-    public dlgNewSprint(java.awt.Frame parent, boolean modal) {
+    public dlgEditSprint(java.awt.Frame parent, boolean modal, Sprint s) {
         super(parent, modal);
         initComponents();
-    }
-    
-    public Date StringToDate(String date)
-    {
-        String startDateString = date;
-        DateFormat df = new SimpleDateFormat("MM/dd/yyyy"); 
-        Date startDate = null;
-        try {
-            startDate = df.parse(startDateString);
-            String newDateString = df.format(startDate);
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        return startDate;
+        sprint = s;
+        txtSprintName.setText(s.name);
+        txtStartDate.setText(DateFormat.getDateInstance().format(s.startDate));
+        txtEndDate.setText(DateFormat.getDateInstance().format(s.endDate));
     }
 
     /**
@@ -64,7 +50,7 @@ public class dlgNewSprint extends javax.swing.JDialog {
 
         jLabel2.setText("Sprint Name");
 
-        jButton1.setText("Add");
+        jButton1.setText("Save");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -135,53 +121,11 @@ public class dlgNewSprint extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        sprint = new Sprint(txtSprintName.getText(), StringToDate(txtStartDate.getText()), StringToDate(txtEndDate.getText()));
-        isAdded = true;
-        
+        //sprint = new Sprint(txtSprintName.getText(), StringToDate(txtStartDate.getText()), StringToDate(txtEndDate.getText()));
+        isChanged = true;
+
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(dlgNewSprint.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(dlgNewSprint.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(dlgNewSprint.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(dlgNewSprint.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the dialog */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                dlgNewSprint dialog = new dlgNewSprint(new javax.swing.JFrame(), true);
-                dialog.addWindowListener(new java.awt.event.WindowAdapter() {
-                    @Override
-                    public void windowClosing(java.awt.event.WindowEvent e) {
-                        System.exit(0);
-                    }
-                });
-                dialog.setVisible(true);
-            }
-        });
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
