@@ -16,5 +16,13 @@ public class Target {
     public String targetDescription;
     public Date created;
     public Date dueDate;
-    public boolean status;    
+    public boolean status;   
+    
+    public Target(int id, String des, Date created, Date due, boolean stat){
+        targetId = id;
+        targetDescription = des;
+        this.created = created;
+        dueDate = due;
+        status = stat;
+    }
 }

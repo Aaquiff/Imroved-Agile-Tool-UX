@@ -5,7 +5,7 @@
  */
 package models;
 
-import javafx.collections.ObservableList;
+import java.util.ArrayList;
 
 /**
  *
@@ -14,5 +14,12 @@ import javafx.collections.ObservableList;
 public class Project {
     public String name = "";
     public String description = "";
-    public ObservableList<Target> targetList;
+    public ArrayList<Target> targetList;
+    
+    public Project(String name, String desc, ArrayList<Target> targets)
+    {
+        this.name = name;
+        this.description = desc;
+        this.targetList = targets;
+    }
 }
