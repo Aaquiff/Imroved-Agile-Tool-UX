@@ -3970,9 +3970,78 @@
                                       <items>
                                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="587.0" prefWidth="406.0">
                                              <children>
-                                                <Pane layoutX="21.0" layoutY="20.0" prefHeight="114.0" prefWidth="326.0" style="-fx-background-color: #e6e600;" />
+                                                <Pane layoutX="21.0" layoutY="20.0" prefHeight="114.0" prefWidth="326.0" style="-fx-background-color: #e6e600;" AnchorPane.leftAnchor="21.0" AnchorPane.rightAnchor="22.0" AnchorPane.topAnchor="20.0">
+                                                   <children>
+                                                      <Label layoutX="24.0" layoutY="21.0" text="ID">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="24.0" layoutY="49.0" text="Des">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="24.0" layoutY="76.0" text="Due">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="76.0" layoutY="21.0" text="1" />
+                                                      <Label layoutX="76.0" layoutY="49.0" text="Release the BetaVersion of Mfin" />
+                                                      <Label layoutX="76.0" layoutY="76.0" text="11/11/2017" />
+                                                      <Button fx:id="Targets_Delete1" layoutX="255.0" layoutY="77.0" mnemonicParsing="false" text="Delete" />
+                                                   </children></Pane>
+                                                <Pane layoutX="22.0" layoutY="155.0" prefHeight="114.0" prefWidth="326.0" style="-fx-background-color: #e6e600;">
+                                                   <children>
+                                                      <Label layoutX="24.0" layoutY="21.0" text="ID">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="24.0" layoutY="49.0" text="Des">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="24.0" layoutY="76.0" text="Due">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="76.0" layoutY="21.0" text="2" />
+                                                      <Label layoutX="76.0" layoutY="49.0" text="Release the Alpha version of Mfin" />
+                                                      <Label layoutX="76.0" layoutY="76.0" text="01/01/2018" />
+                                                      <Button fx:id="Targets_Delete2" layoutX="253.0" layoutY="73.0" mnemonicParsing="false" text="Delete" />
+                                                   </children>
+                                                </Pane>
                                              </children></AnchorPane>
-                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                             <children>
+                                                <Pane layoutX="22.0" layoutY="21.0" prefHeight="114.0" prefWidth="326.0" style="-fx-background-color: #e6e600;">
+                                                   <children>
+                                                      <Label layoutX="24.0" layoutY="21.0" text="ID">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="24.0" layoutY="49.0" text="Des">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="24.0" layoutY="76.0" text="Due">
+                                                         <font>
+                                                            <Font name="System Bold" size="12.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label layoutX="76.0" layoutY="21.0" text="3" />
+                                                      <Label layoutX="76.0" layoutY="49.0" text="Prototype of the Mfin" />
+                                                      <Label layoutX="76.0" layoutY="76.0" text="09/11/2017" />
+                                                      <Button fx:id="Targets_Delete3" layoutX="246.0" layoutY="73.0" mnemonicParsing="false" text="Delete" />
+                                                   </children>
+                                                </Pane>
+                                             </children></AnchorPane>
                                       </items>
                                     </SplitPane>
                                     <Text fx:id="Targets_TargetLabel" layoutX="70.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PROJECT / ID">
@@ -3980,7 +4049,7 @@
                                           <Font name="Calibri Light" size="18.0" />
                                        </font>
                                     </Text>
-                                    <Button layoutX="14.0" layoutY="10.0" mnemonicParsing="false" style="-fx-background-color: #0080ff;" text="+" textFill="WHITE">
+                                    <Button fx:id="Targets_BtnAdd" layoutX="14.0" layoutY="10.0" mnemonicParsing="false" style="-fx-background-color: #0080ff;" text="+" textFill="WHITE">
                                        <font>
                                           <Font name="System Bold" size="18.0" />
                                        </font></Button>

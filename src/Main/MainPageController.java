@@ -94,6 +94,14 @@ public class MainPageController implements Initializable {
     @FXML
     private Text Targets_TargetLabel;
     ObservableList<String> projectsList = FXCollections.observableArrayList();
+    @FXML
+    private Button Targets_Delete1;
+    @FXML
+    private Button Targets_Delete2;
+    @FXML
+    private Button Targets_Delete3;
+    @FXML
+    private Button Targets_BtnAdd;
     /**
      * Initializes the controller class.
      */
