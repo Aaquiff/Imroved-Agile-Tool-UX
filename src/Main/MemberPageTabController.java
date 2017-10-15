@@ -102,7 +102,7 @@ public class MemberPageTabController implements Initializable {
                 alert.setTitle("Information Dialog");
                 alert.setHeaderText(null);
                 memberDetails addmember = new memberDetails(textNickName.getText(),textFullName.getText(),textInternalPhone.getText(),textMobileNumber.getText(),statusCombo.getSelectionModel().getSelectedItem().toString());
-                addmember
+                
                 alert.setContentText("SuccessFully Added!");
                 alert.showAndWait();
                 setNull();
