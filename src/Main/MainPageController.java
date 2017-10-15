@@ -137,7 +137,7 @@ public class MainPageController implements Initializable {
         public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
             if(newValue != null)
             {
-                
+                Targets_TargetLabel.setText(newValue);
             }
         }
     };
