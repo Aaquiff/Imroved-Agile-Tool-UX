@@ -36,9 +36,8 @@ public class Main extends Application implements EventHandler<ActionEvent> {
               //mainPage = "MemberPageTab.fxml";
           Parent root = FXMLLoader.load(getClass().getResource(mainPage));
           primaryStage.initStyle(StageStyle.DECORATED);
-    //            primaryStage.setMaximized(true);
-          primaryStage.setMaximized(false);
-          primaryStage.setResizable(false);
+        primaryStage.setMaximized(true);
+          primaryStage.setResizable(true);
             
             Scene scene = new Scene(root);
                      
