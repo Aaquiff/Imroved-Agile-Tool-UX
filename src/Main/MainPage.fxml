@@ -443,7 +443,10 @@
                   <items>
                     <AnchorPane maxHeight="200.0" minHeight="200.0" minWidth="0.0" prefHeight="200.0" prefWidth="1027.0" style="-fx-background-color: #00cc99;">
                       <children>
-                        <AnchorPane id="pnButtonPane" fx:id="SearchPnButtonPane" prefHeight="75.0" prefWidth="1027.0" style="-fx-background-color: #263238;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                        <AnchorPane id="pnButtonPane" fx:id="SearchPnButtonPane" prefHeight="75.0" prefWidth="1027.0" style="-fx-background-color: #263238;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <Button id="btnAffectToSprint" fx:id="SearchBtnReleaseNotes" layoutX="236.0" layoutY="18.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="130.0" style="-fx-background-color: #f2f2f2;" text="Produce Release&#10;Notes" textAlignment="CENTER" AnchorPane.rightAnchor="577.5" AnchorPane.topAnchor="12.5" />
+                                       </children></AnchorPane>
                         <Button id="btnAffectToSprint" fx:id="SearchBtnAffectToSprint" layoutY="17.5" mnemonicParsing="false" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #f2f2f2;" text="Affected To&#10;Sprint" textAlignment="CENTER" AnchorPane.rightAnchor="437.5" AnchorPane.topAnchor="12.5" />
                         <Button id="btnDuplicate" fx:id="SearchBtnDuplicate" alignment="CENTER_RIGHT" layoutX="609.5" layoutY="17.5" mnemonicParsing="false" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #f2f2f2;" text="Duplicate" AnchorPane.rightAnchor="297.5" AnchorPane.topAnchor="12.5" />
                         <Button id="btnSort" fx:id="SearchBtnSort" alignment="CENTER_RIGHT" layoutX="749.5" layoutY="17.5" mnemonicParsing="false" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #f2f2f2;" text="Sort" AnchorPane.rightAnchor="157.5" AnchorPane.topAnchor="12.5" />
@@ -453,8 +456,8 @@
                                           <Font name="System Bold" size="14.0" />
                                        </font></Label>
                         <TextField id="txtSearchKey" fx:id="SearchTxtSearchKey" prefHeight="30.0" prefWidth="492.0001220703125" AnchorPane.leftAnchor="174.0" AnchorPane.rightAnchor="297.5" AnchorPane.topAnchor="122.5" />
+                        <Button id="AdvSearch" fx:id="SearchBtnAdvSearch" layoutY="17.5" mnemonicParsing="false" onAction="#AdvanceSearch" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #f2f2f2;" text="Advanced&#10;Search" textAlignment="CENTER" AnchorPane.rightAnchor="17.5" AnchorPane.topAnchor="112.5" />
                         <Button id="btnSearch" fx:id="SearchBtnSearch" alignment="CENTER_RIGHT" layoutX="749.5" mnemonicParsing="false" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #f2f2f2;" text="Search" AnchorPane.rightAnchor="157.5" AnchorPane.topAnchor="112.5" />
-                        <Button id="AdvSearch" fx:id="SearchBtnAdvSearch" layoutY="17.5" mnemonicParsing="false" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #f2f2f2;" text="Advanced&#10;Search" textAlignment="CENTER" AnchorPane.rightAnchor="17.5" AnchorPane.topAnchor="112.5" />
                                     <ImageView fitHeight="40.0" fitWidth="45.0" layoutX="529.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="370.0" AnchorPane.topAnchor="18.0">
                                        <image>
                                           <Image url="@resources/img/duplicate32.png" />

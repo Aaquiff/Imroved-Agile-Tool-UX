@@ -47,6 +47,11 @@ import models.Task;
  */
 public class MainPageController implements Initializable {
 
+    
+    //Search Start
+    boolean isTarget = false;
+    
+    
     @FXML
     private AnchorPane SearchPnButtonPane;
     @FXML
@@ -65,6 +70,8 @@ public class MainPageController implements Initializable {
     private Button SearchBtnSearch;
     @FXML
     private Button SearchBtnAdvSearch;
+    @FXML
+    private Button SearchBtnReleaseNotes;
     @FXML
     private TableView<?> SearchTblResults;
     @FXML
@@ -89,6 +96,26 @@ public class MainPageController implements Initializable {
     private TableColumn<?, ?> SearchColProject;
     @FXML
     private TableColumn<?, ?> SearchColSprint;
+    
+    public void AdvanceSearch(){
+        dlgAdvanceSearch dialog = new dlgAdvanceSearch(null, true);
+        dialog.setVisible(true);
+        
+        if(dialog.isTarget)
+        {
+            SearchBtnReleaseNotes.setDisable(false);
+        }
+    }
+    
+    public void InitilizeSearch()
+    {
+        if(isTarget = false)
+        {
+            SearchBtnReleaseNotes.setDisable(true);
+        }
+    }
+    //Search End
+    
     @FXML
     private ListView<String> Targets_ProjectsList;
     @FXML
@@ -112,6 +139,7 @@ public class MainPageController implements Initializable {
         InitializeTargetScreenData();
         // Targets Screen
         initializeSprint();
+        InitilizeSearch();
     }    
 
     private void InitializeTargetScreenData() {

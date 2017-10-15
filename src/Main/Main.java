@@ -24,7 +24,6 @@ import javafx.stage.StageStyle;
  */
 public class Main extends Application implements EventHandler<ActionEvent> {
     Button button;
-    MainController mainCtrl = new MainController();
     @Override
     public void start(Stage primaryStage) {
       
