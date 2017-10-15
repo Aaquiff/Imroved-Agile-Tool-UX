@@ -155,9 +155,9 @@ public class MainPageController implements Initializable {
         Targets_ProjectsList.setItems(projectsList);
         Targets_ProjectsList.getSelectionModel().selectedItemProperty().addListener(projectListItemSelected); 
         
-        Targets_Delete1.setOnAction(e-> AlertBox.display("Delete!!!", "Are you sure?", "Yes"));
-        Targets_Delete2.setOnAction(e-> AlertBox.display("Delete!!!", "Are you sure?", "Yes"));
-        Targets_Delete3.setOnAction(e-> AlertBox.display("Delete!!!", "Are you sure?", "Yes"));
+        Targets_Delete1.setOnAction(e-> JOptionPane.showMessageDialog(null, "Are you sure?", "Delete !", JOptionPane.OK_CANCEL_OPTION));
+        Targets_Delete2.setOnAction(e-> JOptionPane.showMessageDialog(null, "Are you sure?", "Delete !", JOptionPane.OK_CANCEL_OPTION));
+        Targets_Delete3.setOnAction(e-> JOptionPane.showMessageDialog(null, "Are you sure?", "Delete !", JOptionPane.OK_CANCEL_OPTION));
         Targets_BtnAdd.setOnAction(e-> {
             dlgAddTarget d = new dlgAddTarget();
             d.setVisible(true);
