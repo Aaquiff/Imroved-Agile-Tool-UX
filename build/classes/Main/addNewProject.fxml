@@ -11,7 +11,7 @@
 
 <!--set screen to resizable = false-->
 
-<AnchorPane id="AnchorPane" maxHeight="333.0" maxWidth="600.0" minHeight="333.0" minWidth="600.0" prefHeight="333.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="AnchorPane" maxHeight="333.0" maxWidth="600.0" minHeight="333.0" minWidth="600.0" prefHeight="333.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.AddNewProjectViewController">
    <children>
       <Pane layoutY="-3.0" prefHeight="345.0" prefWidth="600.0" style="-fx-background-color: #c0d5f7;">
          <children>
@@ -20,7 +20,7 @@
             <DatePicker layoutX="412.0" layoutY="69.0" />
             <DatePicker layoutX="412.0" layoutY="113.0" />
             <Button layoutX="473.0" layoutY="306.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="51.0" style="-fx-background-color: #428ff4;" text="Add" />
-            <Button layoutX="534.0" layoutY="306.0" mnemonicParsing="false" style="-fx-background-color: #f44141;" text="Cancel" />
+            <Button fx:id="CancelBtn" layoutX="534.0" layoutY="306.0" mnemonicParsing="false" onAction="#Cancel" style="-fx-background-color: #f44141;" text="Cancel" />
          </children></Pane>
       <Label layoutX="39.0" layoutY="21.0" text="Add New Project" textFill="#021bf0" AnchorPane.leftAnchor="37.0">
          <font>

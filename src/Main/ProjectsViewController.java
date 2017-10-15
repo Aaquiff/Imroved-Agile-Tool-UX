@@ -27,19 +27,9 @@ import javax.swing.JOptionPane;
  * @author DimanshaW
  */
 
-//public void AddWork() throws IOException{
-//       String mainpage = "addNewProject.fxml";
-//       Stage p = new Stage();
-//       Parent root = FXMLLoader.load(getClass().getResource(mainpage));
-//            p.initStyle(StageStyle.DECORATED);
-//            //p.setMaximized(true);
-//            p.setResizable(false);
-//            Scene scene = new Scene(root);
-//            p.setScene(scene);
-//            p.show();
-//    }
 public class ProjectsViewController {
     public void AddWork() throws IOException{
+        
         String mainpage = "addNewProject.fxml";
         Stage primaryStage = new Stage();
         final Stage dialog = new Stage();
