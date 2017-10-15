@@ -5,11 +5,14 @@
  */
 package models;
 
+import javafx.collections.ObservableList;
+
 /**
  *
  * @author lathlk
  */
 public class Project {
-    private String name = "";
-    private String description = "";    
+    public String name = "";
+    public String description = "";
+    public ObservableList<Target> targetList;
 }
