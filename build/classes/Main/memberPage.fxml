@@ -51,18 +51,18 @@
                   <TextField fx:id="txtFullName" layoutX="126.0" layoutY="160.0" />
                   <TextField id="txtInternaNo" fx:id="txtInternalNumber" layoutX="414.0" layoutY="126.0" />
                   <TextField fx:id="txtMobileName" layoutX="414.0" layoutY="160.0" />
-                  <TextField fx:id="txtSearch" layoutX="224.0" layoutY="259.0" onInputMethodTextChanged="#searchMember" text="Search by Nick name" />
-                  <Button id="btnAdd" fx:id="addBtn" layoutX="52.0" layoutY="207.0" mnemonicParsing="false" onMouseClicked="#addMember" prefHeight="32.0" prefWidth="106.0" style="-fx-background-color: #00FF00;" text="ADD" textFill="WHITE">
+                  <TextField fx:id="txtSearch" layoutX="224.0" layoutY="259.0" onInputMethodTextChanged="" text="Search by Nick name" />
+                  <Button id="btnAdd" fx:id="addBtn" layoutX="52.0" layoutY="207.0" mnemonicParsing="false" onMouseClicked="" prefHeight="32.0" prefWidth="106.0" style="-fx-background-color: #00FF00;" text="ADD" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
                   </Button>
-                  <Button id="btnAdd" fx:id="updateBtn" layoutX="214.0" layoutY="207.0" mnemonicParsing="false" onMouseClicked="#updateMember" prefHeight="32.0" prefWidth="106.0" style="-fx-background-color: #00F;" text="UPDATE" textFill="WHITE">
+                  <Button id="btnAdd" fx:id="updateBtn" layoutX="214.0" layoutY="207.0" mnemonicParsing="false" onMouseClicked="" prefHeight="32.0" prefWidth="106.0" style="-fx-background-color: #00F;" text="UPDATE" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
                   </Button>
-                  <Button id="btnAdd" fx:id="deleteBtn" layoutX="394.0" layoutY="207.0" mnemonicParsing="false" onMouseClicked="#deleteMember" prefHeight="32.0" prefWidth="106.0" style="-fx-background-color: #ff0000;" text="DELETE" textFill="WHITE">
+                  <Button id="btnAdd" fx:id="deleteBtn" layoutX="394.0" layoutY="207.0" mnemonicParsing="false" onMouseClicked="" prefHeight="32.0" prefWidth="106.0" style="-fx-background-color: #ff0000;" text="DELETE" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>

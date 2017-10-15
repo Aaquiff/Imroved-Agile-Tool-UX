@@ -31,10 +31,13 @@ public class Main extends Application implements EventHandler<ActionEvent> {
         try {
             String mainPage = "MainPage.fxml";
            // mainPage = "SprintPage.fxml";
-            mainPage = "MainPage.fxml";
+            mainPage = "MemberPageTab.fxml";
+            //  mainPage = "MainPage.fxml";
             Parent root = FXMLLoader.load(getClass().getResource(mainPage));
             primaryStage.initStyle(StageStyle.DECORATED);
-            primaryStage.setMaximized(true);
+//            primaryStage.setMaximized(true);
+          primaryStage.setMaximized(false);
+          primaryStage.setResizable(false);
             
             Scene scene = new Scene(root);
                      

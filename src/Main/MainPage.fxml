@@ -111,7 +111,8 @@
                         </AnchorPane>
                     </items>
                   </SplitPane>
-               </content></Tab>
+               </content>
+          </Tab>
             <Tab text="Member">
                <content>
                   <SplitPane dividerPositions="0.3053" prefHeight="200.0" prefWidth="200.0">

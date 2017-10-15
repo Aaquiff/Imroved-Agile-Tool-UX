@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="540.0" prefWidth="762.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.MemberPageTabController">
+   <children>
+      <SplitPane dividerPositions="0.20708955223880596" orientation="VERTICAL" prefHeight="540.0" prefWidth="762.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="58.0" prefWidth="756.0" style="-fx-background-color: #263238;">
+               <children>
+                  <ImageView fitHeight="93.0" fitWidth="110.0" layoutX="32.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/img/projects.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="258.0" layoutY="19.0" text="Member" textFill="#fcfcfc">
+                     <font>
+                        <Font name="System Bold" size="48.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="453.0" prefWidth="765.0">
+               <children>
+                  <ImageView fitHeight="102.0" fitWidth="107.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/img/user.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="146.0" layoutY="30.0" text="Nick Name">
+                     <font>
+                        <Font name="Times New Roman Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="146.0" layoutY="68.0" prefHeight="17.0" prefWidth="86.0" text="Full Name">
+                     <font>
+                        <Font name="Times New Roman Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="443.0" layoutY="31.0" text="Internal Phone">
+                     <font>
+                        <Font name="Times New Roman Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="443.0" layoutY="68.0" text="Mobile Number">
+                     <font>
+                        <Font name="Times New Roman Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="443.0" layoutY="107.0" text="Availablity status">
+                     <font>
+                        <Font name="Times New Roman Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="textNickName" layoutX="255.0" layoutY="28.0" />
+                  <TextField fx:id="textFullName" layoutX="255.0" layoutY="65.0" />
+                  <TextField fx:id="textInternalPhone" layoutX="581.0" layoutY="28.0" />
+                  <TextField fx:id="textMobileNumber" layoutX="581.0" layoutY="66.0" />
+                  <ComboBox fx:id="statusCombo" layoutX="581.0" layoutY="104.0" prefWidth="150.0" />
+                  <TableView fx:id="tableMember" layoutX="16.0" layoutY="201.0" prefHeight="215.0" prefWidth="738.0">
+                    <columns>
+                      <TableColumn prefWidth="161.0" text="Nick Name" />
+                      <TableColumn prefWidth="186.0" text="Full Name" />
+                        <TableColumn prefWidth="132.0" text="Internal phone" />
+                        <TableColumn prefWidth="153.0" text="Mobile Number" />
+                        <TableColumn prefWidth="104.0" text="Status" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="buttonADD" layoutX="122.0" layoutY="151.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="93.0" text="Add">
+                     <font>
+                        <Font name="Times New Roman Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnUPDATE" layoutX="268.0" layoutY="151.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="102.0" text="Update">
+                     <font>
+                        <Font name="Times New Roman Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btnDELETE" layoutX="426.0" layoutY="151.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="102.0" text="Delete">
+                     <font>
+                        <Font name="Times New Roman Bold" size="16.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="textSearch" layoutX="582.0" layoutY="170.0" text="Search by Nick Name" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

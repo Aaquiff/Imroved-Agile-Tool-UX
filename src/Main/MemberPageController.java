@@ -22,34 +22,34 @@ import models.memberDetails;
 public class MemberPageController {
 
     @FXML
-    private TextField txtInternalNumber;
+    public  TextField txtInternalNumber;
 
     @FXML
-    private Button updateBtn;
+    public Button updateBtn;
 
     @FXML
-    private TextField txtMobileName;
+    public TextField txtMobileName;
 
     @FXML
-    private ComboBox<?> statusComboBox;
+    public ComboBox<?> statusComboBox;
 
     @FXML
-    private TextField txtFullName;
+    public TextField txtFullName;
 
     @FXML
-    private TextField textFieldNickName;
+    public TextField textFieldNickName;
 
     @FXML
-    private TextField txtSearch;
+    public TextField txtSearch;
 
     @FXML
-    private TableView<?> memberTableView;
+    public TableView<?> memberTableView;
 
     @FXML
-    private Button addBtn;
+    public Button addBtn;
 
     @FXML
-    private Button deleteBtn;
+    public Button deleteBtn;
 
     public static final ObservableList newMember
             = FXCollections.observableArrayList();
