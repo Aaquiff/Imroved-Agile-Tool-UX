@@ -317,8 +317,10 @@ public class MainPageController implements Initializable {
     }
     
     public void Note() {
-        dlgSprintNotes sn = new dlgSprintNotes(null,true);
+        dlgSprintNotes sn = new dlgSprintNotes(null,true,currentSprint.note);
+        
         sn.setVisible(true);
+        currentSprint.note = sn.getNote();
     }
     
     public void ToggleNavigatorPane() {

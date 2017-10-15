@@ -121,7 +121,8 @@ public class dlgEditSprint extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        //sprint = new Sprint(txtSprintName.getText(), StringToDate(txtStartDate.getText()), StringToDate(txtEndDate.getText()));
+        sprint.name = txtSprintName.getText();
+        
         isChanged = true;
 
         this.dispose();
