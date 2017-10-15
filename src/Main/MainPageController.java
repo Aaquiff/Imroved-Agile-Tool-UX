@@ -19,6 +19,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import DummyData.TargetsScreen_DummyData;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import models.Project;
@@ -97,6 +99,17 @@ public class MainPageController implements Initializable {
         }
         projectsList.addAll(projNames);
         Targets_ProjectsList.setItems(projectsList);
+        Targets_ProjectsList.getSelectionModel().selectedItemProperty().addListener(projectListItemSelected);        
     }
     
+    private final ChangeListener<String> projectListItemSelected = new ChangeListener<String>() {
+        @Override
+        public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
+            if(newValue != null)
+            {
+                
+            }
+        }
+    };
+            
 }
