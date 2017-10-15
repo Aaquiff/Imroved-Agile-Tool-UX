@@ -30,9 +30,10 @@ public class Main extends Application implements EventHandler<ActionEvent> {
       
         try {
             String mainPage = "MainPage.fxml";
-           // mainPage = "SprintPage.fxml";
-            mainPage = "MemberPageTab.fxml";
-            //  mainPage = "MainPage.fxml";
+            mainPage = "MainPage.fmxl";
+//            mainPage = "SprintPage.fxml";
+         //   mainPage="MemberPageTab.fxml";
+
             Parent root = FXMLLoader.load(getClass().getResource(mainPage));
             primaryStage.initStyle(StageStyle.DECORATED);
 //            primaryStage.setMaximized(true);
