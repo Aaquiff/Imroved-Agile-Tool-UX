@@ -65,11 +65,11 @@
                   <ComboBox fx:id="statusCombo" layoutX="581.0" layoutY="104.0" prefWidth="150.0" />
                   <TableView fx:id="tableMember" layoutX="16.0" layoutY="201.0" prefHeight="215.0" prefWidth="738.0">
                     <columns>
-                      <TableColumn prefWidth="161.0" text="Nick Name" />
+<!--                      <TableColumn prefWidth="161.0" text="Nick Name" />
                       <TableColumn prefWidth="186.0" text="Full Name" />
                         <TableColumn prefWidth="132.0" text="Internal phone" />
                         <TableColumn prefWidth="153.0" text="Mobile Number" />
-                        <TableColumn prefWidth="104.0" text="Status" />
+                        <TableColumn prefWidth="104.0" text="Status" />-->
                     </columns>
                   </TableView>
                   <Button fx:id="buttonADD" layoutX="122.0" layoutY="151.0" mnemonicParsing="false" onAction="#addingMember" prefHeight="39.0" prefWidth="93.0" text="Add">

@@ -56,6 +56,11 @@ public class MemberPageTabController implements Initializable {
 //        MemberPageTab.setResizable(false);
         setNull();
         loadDate();
+       
+        
+        
+       
+ 
         
     }    
     
@@ -90,7 +95,7 @@ public class MemberPageTabController implements Initializable {
     public Button buttonADD;
 
         public static final ObservableList member = FXCollections.observableArrayList();
- 
+            public static  ObservableList<memberDetails> memberData=FXCollections.observableArrayList();
     
     @FXML
     public void addingMember() throws IOException{
@@ -101,14 +106,18 @@ public class MemberPageTabController implements Initializable {
                 Alert alert = new Alert(AlertType.INFORMATION);
                 alert.setTitle("Information Dialog");
                 alert.setHeaderText(null);
-                memberDetails addmember = new memberDetails(textNickName.getText(),textFullName.getText(),textInternalPhone.getText(),textMobileNumber.getText(),statusCombo.getSelectionModel().getSelectedItem().toString());
-                addmember
+                //Creating a object to add to the table 
+                
+//                memberData = FXCollections.observableArrayList(
+//              new memberDetails(textNickName.getText(),textFullName.getText(),textInternalPhone.getText(),textMobileNumber.getText(),"Available"));
+//                        loadDate();
+                        
+//                memberDetails addmember = new memberDetails(textNickName.getText(),textFullName.getText(),textInternalPhone.getText(),textMobileNumber.getText(),statusCombo.getSelectionModel().getSelectedItem().toString());
+                
                 alert.setContentText("SuccessFully Added!");
                 alert.showAndWait();
                 setNull();
 
-                    
-        
         }
         else{
               Alert alert = new Alert(AlertType.INFORMATION);
@@ -174,20 +183,43 @@ public class MemberPageTabController implements Initializable {
     }
     public void loadDate(){
        
-        statusCombo = new ComboBox<comboValues>();
-        statusCombo.setItems(FXCollections.observableArrayList(
-        new comboValues("Available"),
-        new comboValues("Not Available")));
-       
-        ArrayList<memberDetails> memberArray = new ArrayList<memberDetails>();
-        memberArray.add(new memberDetails("Ronnie8", "Apisajan","123","0750123456","Available"));
-        memberArray.add(new memberDetails("YoungBlood", "Usama","789","0777123456","Not Available"));
-        memberArray.add(new memberDetails("Quiff", "Aaquiff","456","0770123456","Available"));
-        memberArray.add(new memberDetails("Shipa", "Ashif","963","0710766785","Not Available"));
-        memberArray.add(new memberDetails("Kanji", "AG","147","0762145786","Available"));
-        member.add(memberArray);        
+//        statusCombo = new ComboBox<comboValues>();
+//        statusCombo.setItems(FXCollections.observableArrayList(
+//        new comboValues("Available"),
+//        new comboValues("Not Available")));
+//       
+ 
+        memberData = FXCollections.observableArrayList(
+              new memberDetails("Ronnie8", "Apisajan","123","0750123456","Available"),
+                new memberDetails("YoungBlood", "Usama","789","0777123456","Not Available"),
+                new memberDetails("Quiff", "Aaquiff","456","0770123456","Available"),
+                new memberDetails("Shipa", "Ashif","963","0710766785","Not Available"),
+                new memberDetails("Kanji", "AG","147","0762145786","Available")
+                );
+        
+         TableColumn nickName = new TableColumn("Nick Name");
+         nickName.setMinWidth(150);
+                nickName.setCellValueFactory(new PropertyValueFactory<memberDetails,String>("nickName"));
 
-        tableMember.setItems(member);
+        TableColumn fullName = new TableColumn("Full Name");
+        fullName.setMinWidth(200);
+                fullName.setCellValueFactory(new PropertyValueFactory<memberDetails,String>("fullName"));
+
+        TableColumn internal = new TableColumn("Internal Phone");
+          internal.setMinWidth(150);
+                internal.setCellValueFactory(new PropertyValueFactory<memberDetails,String>("internalPhone"));
+
+        TableColumn mobile = new TableColumn("Mobile No");
+          mobile.setMinWidth(150);
+                mobile.setCellValueFactory(new PropertyValueFactory<memberDetails,String>("mobileNumber"));
+
+        TableColumn status = new TableColumn("Status");
+          status.setMinWidth(100);
+                status.setCellValueFactory(new PropertyValueFactory<memberDetails,String>("status"));
+
+             tableMember.setItems(memberData);
+                     tableMember.getColumns().addAll(nickName,fullName,internal,mobile,status);
+
 
 
     }
