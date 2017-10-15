@@ -19,16 +19,23 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import DummyData.TargetsScreen_DummyData;
+import java.io.IOException;
 import java.util.Date;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.SplitPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.VBox;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 import javax.swing.JOptionPane;
 import models.Project;
 import models.Sprint;
@@ -369,5 +376,33 @@ public class MainPageController implements Initializable {
     }
 
 //Sprint end
+    
+    // Project start
+    public void AddWork() throws IOException{
+        
+        String mainpage = "addNewProject.fxml";
+        Stage primaryStage = new Stage();
+        final Stage dialog = new Stage();
+        dialog.initModality(Modality.APPLICATION_MODAL);
+        dialog.initOwner(primaryStage);
+        VBox dialogVbox = new VBox(20);
+        Parent root = FXMLLoader.load(getClass().getResource(mainpage));
+        dialogVbox.getChildren().add(new Text("This is a Dialog"));
+        Scene dialogScene = new Scene(root);
+        dialog.setResizable(false);
+        dialog.setScene(dialogScene);
+        dialog.show();
+
+    }
+    @FXML
+    private ListView projectListView;
+    public void AddNewProject(Project p){
+        ListView<String> projectListView = new ListView<String>();
+        ObservableList<String> items =FXCollections.observableArrayList (
+            p.name);
+        projectListView.setItems(items);
+                
+    }
+    // Project end
             
 }
