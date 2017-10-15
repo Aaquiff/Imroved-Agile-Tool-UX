@@ -20,7 +20,7 @@ public class TargetsScreen_DummyData {
     
     public TargetsScreen_DummyData(){
         ArrayList<Target> targets1 = new ArrayList<Target>();   
-        targets1.add(new Target(0, "Target 1", new Date(), new Date(), false));
+        targets1.add(new Target(0, "Target 1", new Date(), new Date(2017, 10, 10), false));
         targets1.add(new Target(1, "Target 2", new Date(), new Date(), false));
         targets1.add(new Target(2, "Target 3", new Date(), new Date(), true));
         targets1.add(new Target(3, "Target 4", new Date(), new Date(), false));
@@ -57,4 +57,14 @@ public class TargetsScreen_DummyData {
         return projects;
     }
     
+    public Project GetProject(String name)
+    {
+        for(Project p: projects)
+        {
+            if(p.name.equalsIgnoreCase(name)){
+                return p;
+            }            
+        }
+        return null;
+    }
 }
