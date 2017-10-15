@@ -52,7 +52,6 @@ public class AddNewProjectViewController {
             projectStartDate.setValue(null);
             projectEndDate.setValue(null);
             projectDescription.clear();
-            JOptionPane.showMessageDialog(null, ProjectName + ProjectDescription + ProjectStartDate + ProjectEndDate);
             Cancel(); 
         }
         else{
