@@ -130,6 +130,7 @@ public class MainPageController implements Initializable {
         Targets_Delete1.setOnAction(e-> AlertBox.display("Delete!!!", "Are you sure?", "Yes"));
         Targets_Delete2.setOnAction(e-> AlertBox.display("Delete!!!", "Are you sure?", "Yes"));
         Targets_Delete3.setOnAction(e-> AlertBox.display("Delete!!!", "Are you sure?", "Yes"));
+        Targets_BtnAdd.setOnAction(e-> AlertBox.AddTarget());
     }
     
     private final ChangeListener<String> projectListItemSelected = new ChangeListener<String>() {
