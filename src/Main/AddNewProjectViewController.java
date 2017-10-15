@@ -13,9 +13,9 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javax.swing.JOptionPane;
-import sun.util.calendar.BaseCalendar.Date;
+//import sun.util.calendar.BaseCalendar.Date;
 import models.Project;
-
+import java.util.Date;
 /**
  *
  * @author DimanshaW
@@ -37,19 +37,27 @@ public class AddNewProjectViewController {
     private DatePicker projectEndDate;
     @FXML
     private TextArea projectDescription;
-    @FXML 
-    private javafx.scene.control.Button AddBtn;
+    
     
     public void AddNewProject(){
+        
         String ProjectName = projectName.getText();
-        LocalDate sDate = projectStartDate.getValue();
-        java.sql.Date ProjectStartDate = java.sql.Date.valueOf(sDate);
-        LocalDate eDate = projectEndDate.getValue();
-        java.sql.Date ProjectEndDate = java.sql.Date.valueOf(eDate);
+        LocalDate ProjectStartDate = projectStartDate.getValue();
+        LocalDate ProjectEndDate = projectEndDate.getValue();
         String ProjectDescription = projectDescription.getText();
         Project p = new Project(ProjectName, ProjectStartDate, ProjectEndDate,
                 ProjectDescription);
-        Stage stage = (Stage) AddBtn.getScene().getWindow();
-        stage.close();
+        if(ProjectName != null && ProjectStartDate != null && ProjectEndDate != null && ProjectDescription != null ){
+            projectName.clear();
+            projectStartDate.setValue(null);
+            projectEndDate.setValue(null);
+            projectDescription.clear();
+            Cancel(); 
+        }
+        else{
+            JOptionPane.showMessageDialog(null, "Fill all the fields");
+        }
+        
+        // need to close the window
     }
 }

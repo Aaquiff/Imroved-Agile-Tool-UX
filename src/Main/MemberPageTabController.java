@@ -106,6 +106,7 @@ public class MemberPageTabController implements Initializable {
                 Alert alert = new Alert(AlertType.INFORMATION);
                 alert.setTitle("Information Dialog");
                 alert.setHeaderText(null);
+
                 //Creating a object to add to the table 
                 
 //                memberData = FXCollections.observableArrayList(
@@ -113,6 +114,9 @@ public class MemberPageTabController implements Initializable {
 //                        loadDate();
                         
 //                memberDetails addmember = new memberDetails(textNickName.getText(),textFullName.getText(),textInternalPhone.getText(),textMobileNumber.getText(),statusCombo.getSelectionModel().getSelectedItem().toString());
+
+//                memberDetails addmember = new memberDetails(textNickName.getText(),textFullName.getText(),textInternalPhone.getText(),textMobileNumber.getText(),statusCombo.getSelectionModel().getSelectedItem().toString());
+
                 
                 alert.setContentText("SuccessFully Added!");
                 alert.showAndWait();
