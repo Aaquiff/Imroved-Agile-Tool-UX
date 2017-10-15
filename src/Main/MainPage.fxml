@@ -4056,7 +4056,7 @@
                                              </children></AnchorPane>
                                       </items>
                                     </SplitPane>
-                                    <Text fx:id="Targets_TargetLabel" layoutX="70.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PROJECT / ID">
+                                    <Text fx:id="Targets_TargetLabel" layoutX="70.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Project 1">
                                        <font>
                                           <Font name="Calibri Light" size="18.0" />
                                        </font>
