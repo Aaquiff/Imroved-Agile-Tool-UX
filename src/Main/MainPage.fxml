@@ -25,6 +25,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.TilePane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
@@ -2603,8 +2604,15 @@
                                  <children>
                                     <SplitPane dividerPositions="0.49938800489596086" layoutX="210.0" layoutY="93.0" prefHeight="572.0" prefWidth="819.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="93.0">
                                       <items>
-                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="587.0" prefWidth="406.0" />
-                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="587.0" prefWidth="406.0">
+                                             <children>
+                                                <TilePane layoutX="27.0" layoutY="23.0" prefHeight="86.0" prefWidth="319.0" style="-fx-background-color: #e6e600;" />
+                                                <TilePane layoutX="27.0" layoutY="126.0" prefHeight="86.0" prefWidth="319.0" style="-fx-background-color: #e6e600;" />
+                                             </children></AnchorPane>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                                             <children>
+                                                <TilePane layoutX="26.0" layoutY="26.0" prefHeight="86.0" prefWidth="319.0" style="-fx-background-color: #ff80ff;" />
+                                             </children></AnchorPane>
                                       </items>
                                     </SplitPane>
                                     <Text fx:id="Targets_TargetLabel" layoutX="70.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PROJECT / ID">
@@ -2617,13 +2625,13 @@
                                           <Font name="System Bold" size="18.0" />
                                        </font></Button>
 
-                                    <Text layoutX="582.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Achieved">
+                                    <Text layoutX="537.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Achieved" AnchorPane.rightAnchor="149.56787109375">
                                        <font>
                                           <Font size="15.0" />
                                        </font>
                                     </Text>
 
-                                    <Text layoutX="171.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To DO">
+                                    <Text layoutX="157.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To DO" AnchorPane.leftAnchor="170.0" AnchorPane.topAnchor="64.8134765625">
                                        <font>
                                           <Font size="15.0" />
                                        </font>
