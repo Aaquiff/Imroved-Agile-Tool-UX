@@ -2322,7 +2322,7 @@
                                           <Image url="@resources/img/projects.png" />
                                        </image>
                                     </ImageView>
-                                    <ListView layoutY="80.0" prefHeight="585.0" prefWidth="202.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0" />
+                                    <ListView fx:id="Targets_ProjectsList" layoutY="80.0" prefHeight="585.0" prefWidth="202.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0" />
                                  </children>
                               </AnchorPane>
                             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" stylesheets="@resources/CSS/TargetsScreenStyles.css">
