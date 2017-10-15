@@ -11,10 +11,12 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.text.Text;
 
 /**
  * FXML Controller class
@@ -65,13 +67,19 @@ public class MainPageController implements Initializable {
     private TableColumn<?, ?> SearchColProject;
     @FXML
     private TableColumn<?, ?> SearchColSprint;
+    @FXML
+    private ListView<?> Targets_ProjectsList;
+    @FXML
+    private Text Targets_TargetLabel;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        // Targets Screen
+        
+        // Targets Screen
     }    
     
 }
