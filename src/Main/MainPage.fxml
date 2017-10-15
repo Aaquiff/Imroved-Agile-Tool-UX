@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?import javafx.scene.control.Button?>
+
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
@@ -26,7 +26,6 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.layout.TilePane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
@@ -504,7 +503,7 @@
           </content>
         </Tab>
         <Tab text="Projects">
-            <AnchorPane id="AnchorPane" prefHeight="871.0" prefWidth="1490.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" >
+            <AnchorPane id="AnchorPane" prefHeight="871.0" prefWidth="1490.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <SplitPane dividerPositions="0.29797979797979796" prefHeight="403.0" prefWidth="721.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
@@ -3971,13 +3970,9 @@
                                       <items>
                                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="587.0" prefWidth="406.0">
                                              <children>
-                                                <TilePane layoutX="27.0" layoutY="23.0" prefHeight="86.0" prefWidth="319.0" style="-fx-background-color: #e6e600;" />
-                                                <TilePane layoutX="27.0" layoutY="126.0" prefHeight="86.0" prefWidth="319.0" style="-fx-background-color: #e6e600;" />
+                                                <Pane layoutX="21.0" layoutY="20.0" prefHeight="114.0" prefWidth="326.0" style="-fx-background-color: #e6e600;" />
                                              </children></AnchorPane>
-                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-                                             <children>
-                                                <TilePane layoutX="26.0" layoutY="26.0" prefHeight="86.0" prefWidth="319.0" style="-fx-background-color: #ff80ff;" />
-                                             </children></AnchorPane>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
                                       </items>
                                     </SplitPane>
                                     <Text fx:id="Targets_TargetLabel" layoutX="70.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PROJECT / ID">
