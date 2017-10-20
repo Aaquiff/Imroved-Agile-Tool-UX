@@ -166,11 +166,13 @@ public class MainPageController implements Initializable {
         
         Targets_Delete1.setOnAction(e-> JOptionPane.showMessageDialog(null, "Are you sure?", "Delete !", JOptionPane.OK_CANCEL_OPTION));
         Targets_Delete2.setOnAction(e-> JOptionPane.showMessageDialog(null, "Are you sure?", "Delete !", JOptionPane.OK_CANCEL_OPTION));
+        Targets_Delete22.setOnAction(e-> JOptionPane.showMessageDialog(null, "Are you sure?", "Delete !", JOptionPane.OK_CANCEL_OPTION));
         Targets_Delete3.setOnAction(e-> JOptionPane.showMessageDialog(null, "Are you sure?", "Delete !", JOptionPane.OK_CANCEL_OPTION));
         Targets_BtnAdd.setOnAction(e-> {
             dlgAddTarget d = new dlgAddTarget();
             d.setVisible(true);
         });
+        target22.setVisible(false);
     }
     
     private final ChangeListener<String> projectListItemSelected = new ChangeListener<String>() {
@@ -459,11 +461,17 @@ public class MainPageController implements Initializable {
     // Project end
 
     @FXML
-    private void target2_OnMouseClicked(MouseEvent event) {
+    private void target2_OnMouseClicked(MouseEvent event) throws InterruptedException {
+        Thread.sleep(3000);
+        target2.setVisible(false);
+        target22.setVisible(true);
     }
 
     @FXML
-    private void target22_OnMouseClicked(MouseEvent event) {
+    private void target22_OnMouseClicked(MouseEvent event) throws InterruptedException {
+        Thread.sleep(3000);
+        target22.setVisible(false);
+        target2.setVisible(true);
     }
             
 }
