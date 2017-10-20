@@ -33,6 +33,8 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.SplitPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -96,7 +98,14 @@ public class MainPageController implements Initializable {
     private TableColumn<?, ?> SearchColProject;
     @FXML
     private TableColumn<?, ?> SearchColSprint;
+    @FXML
+    private Pane target2;
+    @FXML
+    private Pane target22;
+    @FXML
+    private Button Targets_Delete22;
     
+    @FXML
     public void AdvanceSearch(){
         dlgAdvanceSearch dialog = new dlgAdvanceSearch(null, true);
         dialog.setVisible(true);
@@ -448,5 +457,13 @@ public class MainPageController implements Initializable {
                 
     }
     // Project end
+
+    @FXML
+    private void target2_OnMouseClicked(MouseEvent event) {
+    }
+
+    @FXML
+    private void target22_OnMouseClicked(MouseEvent event) {
+    }
             
 }
