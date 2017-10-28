@@ -30,7 +30,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="663.0" prefWidth="939.0" style="-fx-background-color: White;" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.MainPageController">
+<AnchorPane id="AnchorPane" prefHeight="663.0" prefWidth="1119.0" style="-fx-background-color: White;" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main.MainPageController">
    <children>
       <TabPane layoutX="151.0" layoutY="14.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: White;" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <tabs>
@@ -75,9 +75,9 @@
                                 </AnchorPane>
                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                                     <children>
-                                        <SplitPane dividerPositions="0.43784530386740333" layoutX="25.0" layoutY="203.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" style="-fx-background-color: White;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                            <items>
-                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="282.0" prefWidth="883.0" SplitPane.resizableWithParent="false">
+                                                <VBox prefHeight="582.0" prefWidth="718.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <children>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="282.0" prefWidth="883.0">
                                                     <children>
                                                         <Label fx:id="sprintNumber" layoutX="14.0" layoutY="14.0" text="Sprint #">
                                                             <font>
@@ -94,7 +94,7 @@
                                                                 <Font size="18.0" />
                                                             </font>
                                                         </Label>
-                                                        <AnchorPane layoutX="273.0" layoutY="132.0" minHeight="0.0" minWidth="0.0" prefHeight="118.0" prefWidth="151.0" style="-fx-background-color: #F7CA18; -fx-border-color: #bdc3c7;">
+                                                        <AnchorPane layoutX="273.0" layoutY="132.0" minHeight="0.0" minWidth="0.0" prefHeight="101.0" prefWidth="151.0" style="-fx-background-color: #F7CA18; -fx-border-color: #bdc3c7;">
                                                             <children>
                                                                 <ProgressBar layoutX="14.0" layoutY="14.0" prefHeight="18.0" prefWidth="252.0" progress="0.88" style="-fx-accent: #F7CA18;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                                                                 <Label layoutX="14.0" layoutY="35.0" text="Available" />
@@ -111,7 +111,7 @@
                                                 </Label>
                                                             </children>
                                                         </AnchorPane>
-                                                        <AnchorPane layoutX="11.0" layoutY="132.0" minHeight="0.0" minWidth="0.0" prefHeight="118.0" prefWidth="254.0" style="-fx-background-color: #87D37C; -fx-border-color: #bdc3c7;">
+                                                        <AnchorPane layoutX="11.0" layoutY="132.0" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="254.0" style="-fx-background-color: #87D37C; -fx-border-color: #bdc3c7;">
                                                             <children>
                                                                 <ProgressBar layoutX="9.6" layoutY="19.6" prefHeight="18.0" prefWidth="255.0" progress="0.68" style="-fx-accent: #87D37C;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                                                                 <Label layoutX="14.0" layoutY="33.0" text="We can do" />
@@ -135,16 +135,16 @@
                                                             </children>
                                                         </AnchorPane>
                                                         <Button fx:id="btnNotes" alignment="BOTTOM_CENTER" contentDisplay="BOTTOM" layoutX="718.0" layoutY="18.0" mnemonicParsing="false" onAction="#Note" prefHeight="118.0" prefWidth="151.0" style="-fx-background-color: White;" text="Notes" textFill="#030303" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                                                        <Button layoutX="11.0" layoutY="264.0" mnemonicParsing="false" onAction="#AddTask" prefHeight="36.0" prefWidth="94.0" style="-fx-background-color: #3498db;" text="Add Task" textFill="WHITE" />
+                                                        <Button layoutX="11.0" layoutY="236.0" mnemonicParsing="false" onAction="#AddTask" prefHeight="36.0" prefWidth="94.0" style="-fx-background-color: #3498db;" text="Add Task" textFill="WHITE" />
                                           <Label layoutX="705.0" layoutY="261.0" text="Scrum Board" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
                                              <font>
                                                 <Font name="System Bold" size="29.0" />
                                              </font>
                                           </Label>
-                                          <Button layoutX="112.0" layoutY="264.0" mnemonicParsing="false" onAction="#RemoveTask" prefHeight="36.0" prefWidth="100.0" style="-fx-background-color: #3498db;" text="Remove Task" textFill="WHITE" />
+                                          <Button layoutX="114.0" layoutY="236.0" mnemonicParsing="false" onAction="#RemoveTask" prefHeight="36.0" prefWidth="100.0" style="-fx-background-color: #3498db;" text="Remove Task" textFill="WHITE" />
                                                     </children>
                                                 </AnchorPane>
-                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="421.0" prefWidth="885.0">
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="74.0" prefWidth="853.0" VBox.vgrow="ALWAYS">
                                                     <children>
                                                         <VBox layoutX="305.0" layoutY="79.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                             <children>
@@ -189,7 +189,7 @@
                                                                                             <cellValueFactory>
                                                                                                 <PropertyValueFactory property="w" />
                                                                                                 
-                                                                                            </cellValueFactory>
+                                                                                                              </cellValueFactory>
                                                                                         </TableColumn>
                                                                                         <TableColumn prefWidth="75.0" text="Target">
                                                                                             <cellValueFactory>
@@ -206,8 +206,8 @@
                                                                                                 <PropertyValueFactory property="project" />
                                                                                             </cellValueFactory>
                                                                                         </TableColumn>
- 
-                                                                                          </columns>
+                  
+                                                                                           </columns>
                                                                                 </TableView>
                                                                             </children>
                                                                         </AnchorPane>
@@ -343,8 +343,8 @@
                                                         </VBox>
                                                     </children>
                                                 </AnchorPane>
-                                            </items>
-                                        </SplitPane>
+                                                   </children>
+                                                </VBox>
                                     </children>
                                 </AnchorPane>
                             </items>
